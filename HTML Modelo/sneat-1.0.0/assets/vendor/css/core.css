@@ -15037,6 +15037,11 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
   display: flex;
 }
 
+.ruedita a:last-child{
+  bottom: 0px;
+  position: fixed;
+}
+
 .menu-toggle::after {
   content: "";
   position: absolute;
