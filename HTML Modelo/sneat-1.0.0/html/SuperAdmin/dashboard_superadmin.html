@@ -214,9 +214,11 @@
 
         <div class="container-xxl flex-grow-1 container-p-y">
 
-          <div class="row">
-            <!-- Expense Overview -->
-            <div class="col-md-6 col-lg-4 order-1 mb-4">
+
+
+          <div class="row mb-5">
+            <!-- Ordenes -->
+            <div class="col-md-6 col-lg-4 order-0 mb-4">
               <div class="card h-100">
                 <div class="card-header">
                   <ul class="nav nav-pills" role="tablist">
@@ -294,94 +296,464 @@
                 </div>
               </div>
             </div>
-            <!--/ Expense Overview -->
-        <!-- Order Statistics -->
-        <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
-          <div class="card h-100">
-            <div class="card-header d-flex align-items-center justify-content-between pb-0">
-              <div class="card-title mb-0">
-                <h5 class="m-0 me-2">Usuarios</h5>
-              </div>
-              <div class="dropdown">
-                <button
-                        class="btn p-0"
-                        type="button"
-                        id="orederStatistics"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                >
-                  <i class="bx bx-dots-vertical-rounded"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
-                  <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-                  <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                  <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <!--/ Ordenes -->
+
+
+
+            <div class="col-md-6 col-lg-4">
+
+            <!-- Usuarios -->
+            <div class=" order-1 ">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                  <div class="card-title mb-0">
+                    <h5 class="m-0 me-2">Usuarios</h5>
+                  </div>
+
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-column align-items-center gap-1">
+                      <h2 class="mb-2">8,258</h2>
+                      <span>Usuarios Totales</span>
+                    </div>
+                    <div id="orderStatisticsChart"></div>
+                  </div>
+                  <ul class="p-0 m-0">
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                                <span class="avatar-initial rounded bg-label-primary"
+                                ><i class="bx bx-mobile-alt"></i
+                                ></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Activos</h6>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">6.1k</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Inactivos</h6>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">1.6k</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Baneados</h6>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">413</small>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="d-flex flex-column align-items-center gap-1">
-                  <h2 class="mb-2">8,258</h2>
-                  <span>Usuarios Totales</span>
+            <!--/ Usuarios -->
+
+            <!-- Agentes -->
+            <div class=" order-2 ">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                  <div class="card-title mb-0">
+                    <h5 class="m-0 me-2">Agentes</h5>
+                  </div>
+
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-column align-items-center gap-1">
+                      <h2 class="mb-2">8,258</h2>
+                      <span>Agentes Totales</span>
+                    </div>
+
+                  </div>
+
                 </div>
-                <div id="orderStatisticsChart"></div>
               </div>
-              <ul class="p-0 m-0">
-                <li class="d-flex mb-4 pb-1">
-                  <div class="avatar flex-shrink-0 me-3">
-                            <span class="avatar-initial rounded bg-label-primary"
-                            ><i class="bx bx-mobile-alt"></i
-                            ></span>
-                  </div>
-                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                    <div class="me-2">
-                      <h6 class="mb-0">Activos</h6>
+            </div>
+            </div>
+            <!--/ Agentes -->
+
+            </div>
+
+            <div class="col-md-6 col-lg-4 order-3 mb-4">
+
+            <!-- Proveedores -->
+            <div class="  ">
+              <h5 class="card-header">Proveedores</h5>
+              <div class="card-body">
+                <div class="table-responsive text-nowrap">
+                  <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                      <th>Más <br> Solicitados</th>
+                      <th>Con Peores <br>Comentarios</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+
+                    </tr>
+                    <tr>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+
+                    </tr>
+                    <tr>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+
+                    </tr>
+                    <tr>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+
+                    </tr>
+                    <tr>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!--/ Proveedores -->
+
+
+              <!-- Proveedores baneados -->
+              <div class=" order-2 ">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2">Proveedores</h5>
                     </div>
-                    <div class="user-progress">
-                      <small class="fw-semibold">6.1k</small>
+
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                          <h2 class="mb-2">8,258</h2>
+                          <span>Proveedores Baneados</span>
+                        </div>
+
+                      </div>
+
                     </div>
                   </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                  <div class="avatar flex-shrink-0 me-3">
-                    <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
-                  </div>
-                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                    <div class="me-2">
-                      <h6 class="mb-0">Inactivos</h6>
-                    </div>
-                    <div class="user-progress">
-                      <small class="fw-semibold">1.6k</small>
-                    </div>
-                  </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                  <div class="avatar flex-shrink-0 me-3">
-                    <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
-                  </div>
-                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                    <div class="me-2">
-                      <h6 class="mb-0">Baneados</h6>
-                      <small class="text-muted">Fine Art, Dining</small>
-                    </div>
-                    <div class="user-progress">
-                      <small class="fw-semibold">413</small>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
+              <!--/ Proveedores baneados -->
+
             </div>
           </div>
-        </div>
-        <!--/ Order Statistics -->
+            <!-- Productos -->
+            <div class=" order-2 ">
+              <h5 class="card-header">Top 10 Productos Más Vendidos</h5>
+              <div class="card-body">
+                <div class="table-responsive text-nowrap">
+                  <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                      <th>N°</th>
+                      <th>Nombre</th>
+                      <th>Categoría</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th>Acciones</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Albert Cook</td>
+                      <td>Albert Cook</td>
+                      <td>50</td>
+                      <td>100</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-trash me-1"></i> Eliminar</a
+                            >
+                            <a class="dropdown-item" href="javascript:void(0);"
+                            ><i class="bx bx-log-in-circle me-1"></i> Añadir Stock</a
+                            >
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!--/ Productos -->
 
 
         </div>
-        </div>
-
-
 
         <!-- / Content -->
 
