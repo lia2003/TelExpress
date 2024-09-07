@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
 
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
 <html
         lang="en"
         class="light-style layout-menu-fixed"
@@ -16,7 +27,7 @@
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
 
-  <title>Plantilla</title>
+  <title>Dashboard</title>
 
   <meta name="description" content="" />
 
@@ -129,14 +140,14 @@
 
       <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+        <li class="menu-item ">
           <a href="inicio_superadmin.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div data-i18n="Inicio">Inicio</div>
           </a>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item active">
           <a href="dashboard_superadmin.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div data-i18n="Dashboard">Dashboard</div>
@@ -182,7 +193,7 @@
 
         <li class="menu-item ruedita" >
           <a
-                  href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                  href="ajustes_superadmin.html"
                   target="_blank"
                   class="menu-link"
           >
@@ -199,6 +210,180 @@
 
       <!-- Content wrapper -->
       <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+
+          <div class="row">
+            <!-- Expense Overview -->
+            <div class="col-md-6 col-lg-4 order-1 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <ul class="nav nav-pills" role="tablist">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2">Órdenes</h5>
+                    </div>
+                  </ul>
+                </div>
+                <div class="card-body px-0">
+                  <div class="tab-content p-0">
+                    <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
+
+                      <div id="incomeChart"></div>
+                      <div class="d-flex justify-content-center pt-4 gap-2">
+
+                        <div>
+                          <!-- Borderless Table -->
+                          <div class="card">
+
+                            <div class="table-responsive text-nowrap">
+                              <table class="table table-borderless">
+                                <thead>
+                                <tr>
+                                  <th>Estado</th>
+                                  <th>Cantidad</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                  <td><span class="badge bg-label-warning me-1">Creado</span></td>
+                                  <td>345</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-danger me-1">En Validación</span></td>
+                                  <td>234</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-primary me-1">En Proceso</span></td>
+                                  <td>266</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-dark me-1">Arribo al País</span></td>
+                                  <td>346</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-secondary me-1">En Aduanas</span></td>
+                                  <td>765</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-info me-1">En Ruta</span></td>
+                                  <td>342</td>
+                                </tr>
+
+                                <tr>
+                                  <td><span class="badge bg-label-success me-1">Recibido</span></td>
+                                  <td>1078</td>
+                                </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <!--/ Borderless Table -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Expense Overview -->
+        <!-- Order Statistics -->
+        <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+          <div class="card h-100">
+            <div class="card-header d-flex align-items-center justify-content-between pb-0">
+              <div class="card-title mb-0">
+                <h5 class="m-0 me-2">Usuarios</h5>
+              </div>
+              <div class="dropdown">
+                <button
+                        class="btn p-0"
+                        type="button"
+                        id="orederStatistics"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                >
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                  <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex flex-column align-items-center gap-1">
+                  <h2 class="mb-2">8,258</h2>
+                  <span>Usuarios Totales</span>
+                </div>
+                <div id="orderStatisticsChart"></div>
+              </div>
+              <ul class="p-0 m-0">
+                <li class="d-flex mb-4 pb-1">
+                  <div class="avatar flex-shrink-0 me-3">
+                            <span class="avatar-initial rounded bg-label-primary"
+                            ><i class="bx bx-mobile-alt"></i
+                            ></span>
+                  </div>
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                    <div class="me-2">
+                      <h6 class="mb-0">Activos</h6>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-semibold">6.1k</small>
+                    </div>
+                  </div>
+                </li>
+                <li class="d-flex mb-4 pb-1">
+                  <div class="avatar flex-shrink-0 me-3">
+                    <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                  </div>
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                    <div class="me-2">
+                      <h6 class="mb-0">Inactivos</h6>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-semibold">1.6k</small>
+                    </div>
+                  </div>
+                </li>
+                <li class="d-flex mb-4 pb-1">
+                  <div class="avatar flex-shrink-0 me-3">
+                    <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                  </div>
+                  <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                    <div class="me-2">
+                      <h6 class="mb-0">Baneados</h6>
+                      <small class="text-muted">Fine Art, Dining</small>
+                    </div>
+                    <div class="user-progress">
+                      <small class="fw-semibold">413</small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--/ Order Statistics -->
+
+
+        </div>
+        </div>
+
+
+
+        <!-- / Content -->
 
         <div class="content-backdrop fade"></div>
       </div>
