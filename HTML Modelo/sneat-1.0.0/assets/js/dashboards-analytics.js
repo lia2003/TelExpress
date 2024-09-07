@@ -427,9 +427,9 @@
         width: 130,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
-      series: [85, 15, 50, 50],
-      colors: [config.colors.primary, config.colors.secondary, config.colors.info, config.colors.success],
+      labels: ['Activos', 'Inactivos', 'Baneados'],
+      series: [75, 20, 5],
+      colors: [config.colors.success, config.colors.primary, config.colors.secondary],
       stroke: {
         width: 5,
         colors: cardColor
@@ -473,9 +473,8 @@
                 show: true,
                 fontSize: '0.8125rem',
                 color: axisColor,
-                label: 'Weekly',
                 formatter: function (w) {
-                  return '38%';
+                  return '100%';
                 }
               }
             }
@@ -492,13 +491,15 @@
   // --------------------------------------------------------------------
   const incomeChartEl = document.querySelector('#incomeChart'),
     incomeChartConfig = {
+
       series: [
         {
-          data: [24, 21, 30, 22, 42, 26, 35, 29]
+          name: 'Cantidad',
+          data: [576, 621, 530, 322, 540, 296, 435, 529]
         }
       ],
       chart: {
-        height: 215,
+        height: 200,
         parentHeightOffset: 0,
         parentWidthOffset: 0,
         toolbar: {
@@ -577,9 +578,9 @@
         labels: {
           show: false
         },
-        min: 10,
-        max: 50,
-        tickAmount: 4
+        min: 0,
+        max: 700,
+        tickAmount: 5
       }
     };
   if (typeof incomeChartEl !== undefined && incomeChartEl !== null) {
