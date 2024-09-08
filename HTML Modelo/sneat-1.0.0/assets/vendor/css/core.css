@@ -15661,19 +15661,24 @@ html:not(.layout-footer-fixed) .content-wrapper {
 .app-brand-logo {
   display: block;
   flex-grow: 0;
-  flex-shrink: 0;
+  flex-shrink: 1;
   overflow: hidden;
   min-height: 1px;
+  max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción del logo */
 }
 .app-brand-logo img,
 .app-brand-logo svg {
   display: block;
+  max-width: 100%; /* Asegura que la imagen no se exceda del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .app-brand-text {
   flex-shrink: 0;
   opacity: 1;
   transition: opacity 0.15s ease-in-out;
+  text-transform: none; /* Esto convertiría todo el texto a minúsculas */
 }
 
 .app-brand-img-collapsed {
