@@ -193,18 +193,81 @@
       </ul>
     </aside>
     <!-- / Menu -->
-    <!-- Layout container -->
+    <!-- Contenido de la página -->
     <div class="layout-page">
-
-
-      <!-- Content wrapper -->
       <div class="content-wrapper">
+        <div class="container-xxl flex-grow-1 container-p-y">
 
-        <div class="content-backdrop fade"></div>
+          <!-- Tabla de productos -->
+          <div class="row">
+            <div class="col-12 col-lg-12 mb-4">
+              <div class="card">
+                <h5 class="card-header">Productos</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table table-striped">
+                    <thead class="table-light">
+                    <tr>
+                      <th>N°</th>
+                      <th>Nombre</th>
+                      <th>Categoría</th>
+                      <th>Cantidad</th>
+                      <th>Descripción</th>
+                      <th>Precio</th>
+                      <th>Costo de envío</th>
+                      <th>Proveedor</th>
+                      <th>Zona</th>
+                      <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Ejemplo de filas de la tabla -->
+                    <tr>
+                      <td>1</td>
+                      <td>Producto A</td>
+                      <td>Categoría 1</td>
+                      <td>50</td>
+                      <td>Descripción A</td>
+                      <td>$100</td>
+                      <td>$10</td>
+                      <td>Proveedor 1</td>
+                      <td>Zona 1</td>
+                      <td>
+                        <button class="btn btn-sm btn-primary">
+                          <i class="bx bx-edit-alt"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <!-- Más filas... -->
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Botón "Crear Nuevo" -->
+                <div class="text-center my-3">
+                  <button class="btn btn-primary" onclick="window.location.href='inventario_registrar_producto.html';">Crear Nuevo</button>
+                </div>
+
+
+                <!-- Paginación -->
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  </ul>
+                </nav>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <!-- Content wrapper -->
     </div>
-    <!-- / Layout page -->
+    <!-- Contenido de la página -->
   </div>
 
   <!-- Overlay -->
