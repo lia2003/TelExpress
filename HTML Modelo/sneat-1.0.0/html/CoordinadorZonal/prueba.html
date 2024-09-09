@@ -1,21 +1,91 @@
-<style>
-    .container {
-      display: flex;
-    }
-    .item1 {
-      flex-shrink: 1;
-    }
-    .item2 {
-      flex-shrink: 2;
-    }
-    .item3 {
-      flex-shrink: 1;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .menu { display: none; }
+    .menu.active { display: block; }
   </style>
-  
-  <div class="container">
-    <div class="item1">Item 1</div>
-    <div class="item2">Item 2</div>
-    <div class="item3">Item 3</div>
+</head>
+<body>
+  <!--<nav>
+    <div class="layout-menu-toggle">
+      <a href="javascript:void(0);" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </a>
+    </div>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="inicio_zonal.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('menu').classList.toggle('active');
+    });
+  </script>-->
+  <div class="card">
+    <h5 class="card-header">Light Table head</h5>
+    <div class="table-responsive text-nowrap">
+      <table class="table">
+        <thead class="table-light">
+          <tr>
+            <th>N</th>
+            <th>Productos</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Solicitar Reposicion</th>
+            <th>Fecha de arribo</th>
+          </tr>
+        </thead>
+        <tbody class="table-border-bottom-0">
+          <tr>
+            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1</strong></td>
+            <td>Cuaderno</td>
+            <td>Educacion </td>
+            <td>34</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#basicModal"
+              >
+                Solicitar
+              </button>
+            </td>
+            <td>10/12/2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   
+  <!-- Modal fuera de la tabla -->
+  <div class="modal fade" id="basicModal" tabindex="-1" aria-labelledby="basicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="basicModalLabel">Solicitar Reposición</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estás seguro de que deseas solicitar la reposición de este producto?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

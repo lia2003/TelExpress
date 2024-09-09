@@ -106,3 +106,21 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+
+/* ESTILO PARA MENU */
+/**********************************************************/
+/*disenio de posicion y tamanio del logo*/
+.text-center>.menu-logo {
+  margin-bottom: -45px;
+  width: 150px;
+}
+
+/*modifica el nombre de la pagina*/
+.desing-name{
+  font-family: 'Poppins', sans-serif;
+  color:#7367F0;
+  padding-left: 15px;
+
+}
+
