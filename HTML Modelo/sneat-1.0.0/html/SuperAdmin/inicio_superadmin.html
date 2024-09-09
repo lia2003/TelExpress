@@ -321,159 +321,117 @@
                       <th>Actions</th>
                     </tr>
                     </thead>
-                    <tbody class="table-border-bottom-0">
-                    <tr>
-                      <td><i class="fab fa-angular fa-lg text-danger me-3"></i> Albert</td>
-                      <td> Cook</td>
-                      <td>Albert Cook</td>
-                      <td>01234567</td>
-                      <td> Angular Project</td>
-                      <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Eliminar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-log-in-circle me-1"></i> Ingresar</a
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fab fa-react fa-lg text-info me-3"></i>Barry </td>
-                      <td> Hunter</td>
-                      <td>Barry Hunter</td>
-                      <td>01234567</td>
-                      <td>React Project</td>
-                      <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Eliminar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-log-in-circle me-1"></i> Ingresar</a
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> Trevor</td>
-                      <td> Baker</td>
-                      <td>Trevor Baker</td>
-                      <td>01234567</td>
-                      <td>VueJs Project</td>
-                      <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Eliminar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-log-in-circle me-1"></i> Ingresar</a
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i>Jerry</td>
-                      <td> Milton</td>
-                      <td>Jerry Milton</td>
-                      <td>01234567</td>
-                      <td> Bootstrap Project</td>
-                      <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Eliminar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-log-in-circle me-1"></i> Ingresar</a
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fab fa-angular fa-lg text-danger me-3"></i> Albert</td>
-                      <td> Cook</td>
-                      <td>Albert Cook</td>
-                      <td>01234567</td>
-                      <td>Angular Project</td>
-                      <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-edit-alt me-1"></i> Editar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-trash me-1"></i> Eliminar</a
-                            >
-                            <a class="dropdown-item" href="javascript:void(0);"
-                            ><i class="bx bx-log-in-circle me-1"></i> Ingresar</a
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+                    <tbody id="userTable" class="table-border-bottom-0">
+                    <!-- Aquí se insertarán los datos de los usuarios dinámicamente -->
                     </tbody>
                   </table>
                 </div>
-
               </div>
               <br>
               <div>
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous" onclick="prevPage()">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(3)">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next" onclick="nextPage()">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
               <!-- Bootstrap Table with Header - Light -->
             </div>
+
+            <script>
+              // Lista de usuarios
+              const users = [
+                { name: 'Albert', surname: 'Cook', email: 'Albert Cook', dni: '01234567', address: 'Angular Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Trevor', surname: 'Baker', email: 'Trevor Baker', dni: '01234567', address: 'VueJs Project' },
+                { name: 'Jerry', surname: 'Milton', email: 'Jerry Milton', dni: '01234567', address: 'Bootstrap Project' },
+                { name: 'Albert', surname: 'Cook', email: 'Albert Cook', dni: '01234567', address: 'Angular Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Trevor', surname: 'Baker', email: 'Trevor Baker', dni: '01234567', address: 'VueJs Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Trevor', surname: 'Baker', email: 'Trevor Baker', dni: '01234567', address: 'VueJs Project' },
+                { name: 'Jerry', surname: 'Milton', email: 'Jerry Milton', dni: '01234567', address: 'Bootstrap Project' },
+                { name: 'Albert', surname: 'Cook', email: 'Albert Cook', dni: '01234567', address: 'Angular Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Trevor', surname: 'Baker', email: 'Trevor Baker', dni: '01234567', address: 'VueJs Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
+                { name: 'Trevor', surname: 'Baker', email: 'Trevor Baker', dni: '01234567', address: 'VueJs Project' },
+                { name: 'Jerry', surname: 'Milton', email: 'Jerry Milton', dni: '01234567', address: 'Bootstrap Project' },
+                { name: 'Albert', surname: 'Cook', email: 'Albert Cook', dni: '01234567', address: 'Angular Project' },
+                { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' }
+              ];
+
+              let currentPage = 1;
+              const rowsPerPage = 5;
+
+              // Función para mostrar los usuarios de la página actual
+              function displayUsers(usersToShow) {
+                const tableBody = document.getElementById('userTable');
+                tableBody.innerHTML = ''; // Limpiar la tabla
+                usersToShow.forEach(user => {
+                  const row = `<tr>
+        <td>${user.name}</td>
+        <td>${user.surname}</td>
+        <td>${user.email}</td>
+        <td>${user.dni}</td>
+        <td>${user.address}</td>
+        <td>
+          <div class="dropdown">
+            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+              <i class="bx bx-dots-vertical-rounded"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Editar</a>
+              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Eliminar</a>
+              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-log-in-circle me-1"></i> Ingresar</a>
+            </div>
+          </div>
+        </td>
+      </tr>`;
+                  tableBody.innerHTML += row;
+                });
+              }
+
+              // Función para cambiar de página
+              function changePage(page) {
+                const start = (page - 1) * rowsPerPage;
+                const end = start + rowsPerPage;
+                const usersToShow = users.slice(start, end);
+                displayUsers(usersToShow);
+                currentPage = page;
+              }
+
+              // Función para ir a la página anterior
+              function prevPage() {
+                if (currentPage > 1) {
+                  changePage(currentPage - 1);
+                }
+              }
+
+              // Función para ir a la página siguiente
+              function nextPage() {
+                if (currentPage < Math.ceil(users.length / rowsPerPage)) {
+                  changePage(currentPage + 1);
+                }
+              }
+
+              // Mostrar la primera página al cargar
+              changePage(1);
+            </script>
+
             <!--/ Tabla 1 -->
 
             <!-- Tabla 2 -->
