@@ -106,3 +106,155 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+
+/* ESTILO PARA MENU */
+/**********************************************************/
+/*disenio de posicion y tamanio del logo*/
+.text-center>.menu-logo {
+  margin-bottom: -45px;
+  width: 150px;
+}
+
+/*modifica el nombre de la pagina*/
+.desing-name{
+  font-family: 'Poppins', sans-serif;
+  color:#7367F0;
+  padding-left: 15px;
+
+}
+
+/********************************************************************/
+/*calendario*/
+
+/* Estilos personalizados para los botones de filtro -----*/
+.filter-btn {
+  width: 80%; /* Ocupa todo el ancho disponible ----*/
+  justify-content: flex-start;
+  text-align:left;
+}
+
+/* El cuadrado de color dentro del botón */
+.filter-btn::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px; /* Para hacer los bordes del cuadrado ligeramente redondeados */
+}
+.filter-btn:hover{
+  border: #4c4c4d;
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="meeting"]::before {
+  background-color: #d2eea3; /* Color de Reunión */
+}
+
+.btn.btn-calendar-1 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+  justify-content: flex-start;
+}
+.btn.btn-calendar-1:hover {
+  color: #555555f1;
+  background-color: #d2eea3;
+  border-color: #83ec52;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="workshop"]::before {
+  background-color: #c6aff9; /* Color de Reunión */
+}
+
+.btn.btn-calendar-2 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+  justify-content: flex-start;
+}
+.btn.btn-calendar-2:hover {
+  color: #555555f1;
+  background-color: #c6aff9;
+  border-color: #b18ff8;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="conference"]::before {
+  background-color: #f2d288; /* Color de Reunión */
+}
+
+.btn.btn-calendar-3 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+}
+.btn.btn-calendar-3:hover {
+  color: #555555f1;
+  background-color: #f2d288;
+  border-color: #f8ba2a;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+
+.fc-toolbar h2, /* Esto afecta el título del mes */
+        .fc-day-header span { /* Esto afecta los días de la semana */
+        text-transform: capitalize; /* Capitaliza la primera letra */
+}
+/* Centrar el título de los meses --------*/
+.fc-toolbar .h2 {
+  display:flex;
+  text-align: center;
+  width: 100%;
+ justify-content: center;
+ padding-right: 0.5rem;
+ padding-left:0.5rem;
+
+}
+
+
+/* Estilos para centrar el contenido de la barra de herramientas ---*/
+.fc-toolbar {
+  display: flex;
+  /*justify-content: center;*/
+  justify-content: space-between;
+  align-items: center;
+
+}
+ /* Estilos para los botones de filtro en una sola columna ---*/
+ #event-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre botones ---*/
+}
+
+
+.fc-left{
+  order: 1; /*lleva las botones a la izquierda*/
+}
+.fc-center {
+  order: 2; /* Mantener el título en el centro */
+  text-align: right; /* Asegurar el centrado */
+  flex-grow: 3; /* Hace que el centro se expanda para forzar el centrado */
+}
+ /* Estilizar el texto "+ more" ----*/
+.fc-more {
+  font-size: 12px; /* Tamaño pequeño ----*/
+  color: #4c75c2; /* Color gris ----*/
+  /*position: absolute;
+  bottom: 2px;
+  right: 5px;*/
+}
+/* Ajustes visuales generales -------*/
+.panel-body {
+  padding: 20px;
+} 
+
+

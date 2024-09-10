@@ -64,6 +64,16 @@
   }
 }
 
+/* Cuando el menú está expandido */
+#layout-menu.menu-expanded{
+  display:block;
+}
+/* Por defecto, el menú está colapsado en pantallas pequeñas */
+#layout-menu.menu-collapsed {
+  display: none;
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -6614,7 +6624,8 @@ label.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #ff3e1d;
+/*background-color: #ff3e1d;*/
+  background-color: #d74a31;
   border-color: #ff3e1d;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 62, 29, 0.4);
 }
