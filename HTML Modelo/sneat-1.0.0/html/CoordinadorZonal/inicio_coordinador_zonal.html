@@ -41,7 +41,8 @@
             href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
             rel="stylesheet"
     />
-
+    <!--FUENTE DEL TEXTO 1-->
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet">
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
 
@@ -78,7 +79,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <!-- Contenedor para la imagen centrada -->
             <div style="text-align: center;">
-                <img src="logo.png" alt="Imagen" style="width: 150px; margin-bottom: -45px;">
+                <img src="logo.png" alt="Imagen" style="width: 150px; margin-bottom: -70px;">
             </div>
 
             <div class="app-brand demo" style="text-align: center;">
@@ -287,13 +288,37 @@
                 <div class="container-xxl flex-grow-1 container-p-y">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Estadísticas recientes</h5>
-                            <p class="card-text">Aquí puedes incluir gráficas, tablas u otros elementos que quieras mostrar en esta área de contenido principal.</p>
+                            <!-- En caso necesites cambiar al coordinador según su zona, solo debes modificar el class del span aca abajo -->
+                            <span class="badge bg-label-warning" style="font-size: 17px; margin-bottom: 20px;">Norte</span>
+                            <h4 class="app-brand-text demo menu-text fw-bolder" style="font-family: Poppins; color: #7367F0; text-align: center;">¡Bienvenido coordinador zonal!</h4>
+
+                            <!-- Añadimos margen superior al segundo h4 -->
+                            <h4 class="mb-2" style="font-family: Zilla Slab; margin-top: 30px; margin-bottom:40px">En esta sección, podrás ver algunas funciones que puedes realizar como coordinador zonal. </h4>
+
+                            <!-- Contenedor flexbox para alinear el texto y la imagen -->
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <!-- Banner con el texto de funciones a la izquierda -->
+                                <div style="background-color: #6DC8C2; padding: 20px; border-radius: 10px; width: 60%;">
+                                    <p style="font-family: Zilla Slab; font-size: 20px; color: white;">
+                                        Funciones:
+                                        <br>1. Crear agentes de compra
+                                        <br>2. Crear y actualizar fechas de descarga de las importaciones
+                                        <br>3. Solicitar reposición para el inventario
+                                    </p>
+                                </div>
+                                <!-- Imagen alineada a la derecha -->
+                                <img src="inicio.png" alt="Imagen" style="width: 400px; margin-left: 20px;">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- /Aquí termina el contenido central -->
             </div>
+            <!-- /Aquí termina el contenido central -->
+
+
+
+
+        </div>
             <!-- / Content wrapper -->
         </div>
         <!-- / Layout page -->
