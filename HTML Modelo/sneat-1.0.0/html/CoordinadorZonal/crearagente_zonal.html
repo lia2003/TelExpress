@@ -10,7 +10,7 @@
 * Copyright ThemeSelection (https://themeselection.com)
 
 =========================================================
--->
+ -->
 <!-- beautify ignore:start -->
 <html
         lang="en"
@@ -19,16 +19,15 @@
         data-theme="theme-default"
         data-assets-path="../../assets/"
         data-template="vertical-menu-template-free"
->
+        xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8" />
     <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
-            
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
-<!-- content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"-->
-    <title>Inicio- CoordinadorZonal</title>
+
+    <title>Crear- CoordinadorZonal</title>
 
     <meta name="description" content="" />
 
@@ -39,11 +38,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
             rel="stylesheet"
     />
-    <!--FUENTE DEL TEXTO 1-->
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
 
@@ -78,6 +76,7 @@
     <div class="layout-container">
         <!-- Menu -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+
             <!-- Contenedor para la imagen centrada -->
             <div style="text-align: center;">
                 <img src="logo.png" alt="Imagen" style="width: 150px; margin-bottom: -70px; margin-top: -20px">
@@ -97,27 +96,28 @@
             <div class="menu-inner-shadow"></div>
 
             <ul class="menu-inner py-1">
-                <!-- Dashboard -->
-                <li class="menu-item active">
+                <!-- INICIO -->
+                <li class="menu-item">
                     <a href="inicio_coordinador_zonal.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Inicio">Inicio</div>
                     </a>
                 </li>
 
-                <!-- Mis pedidos -->
+                <!-- DASHBOARD -->
                 <li class="menu-item">
                     <a href="dashboard_zonal.html" class="menu-link" >
                         <i class="menu-icon tf-icons bx bx-grid-alt"></i>
                         <div data-i18n="Dashboard">Dashboard</div>
                     </a>
                 </li>
-                <!--Tienda-->
-                <li class="menu-item">
+                <!--AGENTES-->
+                <li class="menu-item active">
                     <a href="listaagente_zonal.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-user-plus"></i>
                         <div data-i18n="Agentes">Agentes</div>
                     </a>
+
                 </li>
                 <li class="menu-item">
                     <a href="importacion_zonal.html" class="menu-link">
@@ -132,6 +132,8 @@
                     </a>
                 </li>
 
+                </li>
+
             </ul>
         </aside>
         <!-- / Menu -->
@@ -139,7 +141,11 @@
         <!-- Layout container -->
         <div class="layout-page">
             <!-- Navbar -->
-            <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+
+            <nav
+                    class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                    id="layout-navbar"
+            >
                 <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                     <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                         <i class="bx bx-menu bx-sm"></i>
@@ -155,71 +161,87 @@
                     <!-- /Search -->
 
                     <ul class="navbar-nav flex-row align-items-center ms-auto">
+
                         <!-- Notificaciones -->
                         <li class="nav-item navbar-dropdown dropdown-user dropdown">
                             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                <!-- Icono de campana con contador de notificaciones -->
                                 <div class="position-relative">
                                     <div class="bx bx-bell" style="font-size: 26px; color: #7367F0;"></div>
-                                    <span class="badge bg-danger rounded-circle position-absolute d-flex justify-content-center align-items-center" style="top: -5px; right: -5px; font-size: 12px; width: 18px; height: 18px;">
-                      5
-                    </span>
+                                    <!-- Contador de notificaciones -->
+                                    <span class="badge bg-danger rounded-circle position-absolute d-flex justify-content-center align-items-center"
+                                          style="top: -5px; right: -5px; font-size: 12px; width: 18px; height: 18px;">
+        5
+      </span>
                                 </div>
                             </a>
+
+                            <!-- Dropdown de notificaciones -->
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li class="dropdown-header">Notificaciones</li>
+                                <li class="dropdown-header">Notificaciones</li> <!-- Encabezado -->
+
+                                <!-- Notificación 1 -->
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="bx bx-message-square-dots me-3" style="font-size: 20px; color: #7367F0;"></div>
+                                            <div class="bx bx-message-square-dots me-3" style="font-size: 20px; color: #7367F0;"></div> <!-- Ícono de la notificación -->
                                             <div>
                                                 <span class="d-block">Nueva solicitud recibida</span>
-                                                <small class="text-muted">Hace 5 minutos</small>
+                                                <small class="text-muted">Hace 5 minutos</small> <!-- Hora de la notificación -->
                                             </div>
                                         </div>
                                     </a>
                                 </li>
 
+                                <!-- Notificación 2 -->
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="bx bx-check-circle me-3" style="font-size: 20px; color: #28C76F;"></div>
+                                            <div class="bx bx-check-circle me-3" style="font-size: 20px; color: #28C76F;"></div> <!-- Ícono de confirmación -->
                                             <div>
                                                 <span class="d-block">Tarea completada</span>
-                                                <small class="text-muted">Hace 2 horas</small>
+                                                <small class="text-muted">Hace 2 horas</small> <!-- Hora de la notificación -->
                                             </div>
                                         </div>
                                     </a>
                                 </li>
 
+                                <!-- Notificación 3 -->
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="bx bx-error me-3" style="font-size: 20px; color: #EA5455;"></div>
+                                            <div class="bx bx-error me-3" style="font-size: 20px; color: #EA5455;"></div> <!-- Ícono de error -->
                                             <div>
                                                 <span class="d-block">Error en el sistema</span>
-                                                <small class="text-muted">Hace 1 día</small>
+                                                <small class="text-muted">Hace 1 día</small> <!-- Hora de la notificación -->
                                             </div>
                                         </div>
                                     </a>
                                 </li>
 
+                                <!-- Notificación 4 -->
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="bx bx-download me-3" style="font-size: 20px; color: #FF9F43;"></div>
+                                            <div class="bx bx-download me-3" style="font-size: 20px; color: #FF9F43;"></div> <!-- Ícono de descarga -->
                                             <div>
                                                 <span class="d-block">Archivo descargado</span>
-                                                <small class="text-muted">Hace 3 días</small>
+                                                <small class="text-muted">Hace 3 días</small> <!-- Hora de la notificación -->
                                             </div>
                                         </div>
                                     </a>
                                 </li>
 
+                                <!-- Ver todas las notificaciones -->
                                 <li class="dropdown-footer">
                                     <a class="dropdown-item text-center text-primary" href="#">Ver todas las notificaciones</a>
                                 </li>
                             </ul>
                         </li>
+                        <!-- Notificaciones -->
+
+
+
 
                         <!-- User -->
                         <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -261,11 +283,11 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                      <span class="d-flex align-items-center align-middle">
-                        <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                        <span class="flex-grow-1 align-middle">Billing</span>
-                        <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                      </span>
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -279,74 +301,200 @@
                                 </li>
                             </ul>
                         </li>
+                        <!--/ User -->
                     </ul>
                 </div>
+
+
             </nav>
-            <!-- / Navbar -->
-
-            <!-- Content wrapper -->
-            <div class="content-wrapper">
-                <!-- Aquí se agrega el contenido central -->
-                <div class="container-xxl flex-grow-1 container-p-y">
-                    <div class="card">
-                        <div class="card-body">
-                            <!-- En caso necesites cambiar al coordinador según su zona, solo debes modificar el class del span aca abajo -->
-                            <span class="badge bg-label-warning" style="font-size: 17px; margin-bottom: 20px;">Norte</span>
-                            <h4 style="font-family: 'Poppins', sans-serif; color: #7367F0; font-weight: bold; padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 1rem; text-align: center; font-size: 40px;">¡Bienvenido coordinador zonal!</h4>
-
-                            <!-- Añadimos margen superior al segundo h4 -->
-                            <h4 class="mb-2" style="margin-top: 20px; margin-bottom: -20px; font-size: 20px; font-family: 'Poppins', sans-serif; font-weight: 100">
-                                En esta sección, podrás ver algunas funciones que puedes realizar como coordinador zonal.
-                            </h4>
-
-                            <!-- Contenedor flexbox para alinear el texto y la imagen -->
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: -60px">
-                                <!-- Banner con el texto de funciones a la izquierda -->
-                                <div style="background-color: #6DC8C2; padding: 20px; border-radius: 10px; width: 60%;">
-                                    <p style="font-size:20px; color: white; font-family: 'Poppins', sans-serif; font-weight: 100;">
-                                        Funciones:
-                                        <br>1. Crear agentes de compra
-                                        <br>2. Crear y actualizar fechas de descarga de las importaciones
-                                        <br>3. Solicitar reposición para el inventario
-                                    </p>
+            <!--Aqui termina el navbar-->
+            <!--Este es el contenedor principal-->
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <h4 style="font-family: 'Poppins', sans-serif; color: #7367F0; font-weight: bold; padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 1rem; text-align: center; font-size: 40px;">Crear agente de compra</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <!--FORMULARIO-->
+                        <div class="card mb-4">
+                            <h5 class="card-header">Formulario</h5>
+                            <div class="card-body">
+                                <!-- Nombre -->
+                                <div class="mb-3 row">
+                                    <label for="nombre-input" class="col-md-2 col-form-label">Nombre</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="nombre-input" placeholder="Ingrese nombre" />
+                                    </div>
                                 </div>
-                                <!-- Imagen alineada a la derecha -->
-                                <img src="inicio.png" alt="Imagen" style="width: 400px; margin-left: 20px;">
-                            </div>
 
+                                <!-- Apellido -->
+                                <div class="mb-3 row">
+                                    <label for="apellido-input" class="col-md-2 col-form-label">Apellido</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="apellido-input" placeholder="Ingrese apellido" />
+                                    </div>
+                                </div>
+
+                                <!-- DNI -->
+                                <div class="mb-3 row">
+                                    <label for="dni-input" class="col-md-2 col-form-label">DNI</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="dni-input" placeholder="Ingrese DNI" />
+                                    </div>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="mb-3 row">
+                                    <label for="telefono-input" class="col-md-2 col-form-label">Teléfono</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="telefono-input" placeholder="Ingrese teléfono" />
+                                    </div>
+                                </div>
+
+                                <!-- Correo -->
+                                <div class="mb-3 row">
+                                    <label for="correo-input" class="col-md-2 col-form-label">Correo</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="email" id="correo-input" placeholder="Ingrese correo" />
+                                    </div>
+                                </div>
+
+                                <!-- Código de despachador -->
+                                <div class="mb-3 row">
+                                    <label for="codigo-despachador-input" class="col-md-2 col-form-label">Código de despachador</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="codigo-despachador-input" placeholder="Ingrese código" />
+                                    </div>
+                                </div>
+
+                                <!-- RUC -->
+                                <div class="mb-3 row">
+                                    <label for="ruc-input" class="col-md-2 col-form-label">RUC</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="ruc-input" placeholder="Ingrese RUC" />
+                                    </div>
+                                </div>
+
+                                <!-- Razón social -->
+                                <div class="mb-3 row">
+                                    <label for="razon-social-input" class="col-md-2 col-form-label">Razón Social</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="razon-social-input" placeholder="Ingrese razón social" />
+                                    </div>
+                                </div>
+
+                                <!-- Dirección -->
+                                <div class="mb-3 row">
+                                    <label for="direccion-input" class="col-md-2 col-form-label">Dirección</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="direccion-input" placeholder="Ingrese dirección" />
+                                    </div>
+                                </div>
+
+                                <!-- Distrito (Desplegable) -->
+                                <div class="mb-3 row">
+                                    <label for="distrito-input" class="col-md-2 col-form-label">Distrito</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="distrito-input">
+                                            <option value="">Seleccione un distrito</option>
+                                            <option value="ancon">Ancón</option>
+                                            <option value="santa-rosa">Santa Rosa</option>
+                                            <option value="carabayllo">Carabayllo</option>
+                                            <option value="puente-piedra">Puente Piedra</option>
+                                            <option value="comas">Comas</option>
+                                            <option value="los-olivos">Los Olivos</option>
+                                            <option value="san-martin">San Martín de Porres</option>
+                                            <option value="independencia">Independencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Código de jurisdicción -->
+                                <div class="mb-3 row">
+                                    <label for="codigo-jurisdiccion-input" class="col-md-2 col-form-label">Código de Jurisdicción</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="codigo-jurisdiccion-input" placeholder="Ingrese código de jurisdicción" />
+                                    </div>
+                                </div>
+
+                                <!-- Zona (No editable) -->
+                                <div class="mb-3 row">
+                                    <label for="zona-input" class="col-md-2 col-form-label">Zona</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" id="zona-input" value="Norte" readonly />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!--FORMULARIO-->
+                        <!-- BOTON DE CREAR AGENTE -->
+                        <div class="d-flex justify-content-center" style="margin-bottom: 1rem; margin-top:-10px">
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConfirmarSolicitud" style="background-color: #e89b85; border-color: #e89b85; font-size: 17px; font-family: 'Poppins', sans-serif;">Crear</a>
+                        </div>
+                        <!--/ BOTON DE CREAR AGENTE -->
                     </div>
                 </div>
             </div>
-            <!-- /Aquí termina el contenido central -->
-
-
-
-
         </div>
-            <!-- / Content wrapper -->
-        </div>
-        <!-- / Layout page -->
+        <!-- Content wrapper -->
+
     </div>
+    <!-- / Layout page -->
+</div>
 
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
 </div>
 <!-- / Layout wrapper -->
 
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="modalConfirmarSolicitud" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCenterTitle" style="font-family: 'Poppins', sans-serif; font-size: 20px; text-align: center;">Confirmar solicitud</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <hr class="my-4 " />
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col mb-3">
+                        <label>¿Estás seguro de la creación de un nuevo agente de compra?</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center mx-2">
+                <a href="crearagente_zonal.html" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</a>
+                <a href="listaagente_zonal.html" class="btn btn-primary">Confirmar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 <!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
 <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
 <script src="../../assets/vendor/libs/popper/popper.js"></script>
 <script src="../../assets/vendor/js/bootstrap.js"></script>
 <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
 <script src="../../assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
 
 <!-- Vendors JS -->
 <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
 <!-- Main JS -->
 <script src="../../assets/js/main.js"></script>
+
 <!-- Page JS -->
 <script src="../../assets/js/dashboards-analytics.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
