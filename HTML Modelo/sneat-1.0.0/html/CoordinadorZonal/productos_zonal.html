@@ -73,12 +73,12 @@
         }
 
         .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-            background: #9ab3e9;
+            background: #00C8E5;
             color: #ccc8c8;
             border: 1px solid #aecef0;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-            
+
         }
 
         /* Ocultar el buscador, el texto "Showing" y el selector de longitud */
@@ -342,15 +342,15 @@
 
                 <div class="card">
                     <div class="table-responsive text-nowrap mx-3">
-                        <table class="table" id="miTable">
+                        <table class="table" id="miTable" style="margin-top: 20px;">
                             <thead class="table-light">
                             <tr>
-                                <th>N°</th>
-                                <th>Productos</th>
-                                <th>Categoria</th>
-                                <th>Cantidad</th>
-                                <th>Solicitar Reposición</th>
-                                <th>Fecha de arribo</th>
+                                <th style="color: #00C8E5;">N°</th>
+                                <th style="color: #00C8E5;">Productos</th>
+                                <th style="color: #00C8E5;">Categoria</th>
+                                <th style="color: #00C8E5;">Cantidad</th>
+                                <th style="color: #00C8E5;">Solicitar Reposición</th>
+                                <th style="color: #00C8E5;">Fecha de arribo</th>
                             </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -365,8 +365,10 @@
                                             class="btn btn-primary"
                                             data-bs-toggle="modal"
                                             data-bs-target="#modalCenter"
+                                            style="background-color: #00C8E5; border-color: #00C8E5;"
                                     >
                                         Solicitar
+                                    </button>
                                     </button>
                                 </td>
                                 <td>
@@ -391,6 +393,7 @@
                                             class="btn btn-primary"
                                             data-bs-toggle="modal"
                                             data-bs-target="#modalCenter"
+                                            style="background-color: #00C8E5; border-color: #00C8E5;"
                                     >
                                         Solicitar
                                     </button>
@@ -417,6 +420,7 @@
                                             class="btn btn-primary"
                                             data-bs-toggle="modal"
                                             data-bs-target="#modalCenter"
+                                            style="background-color: #00C8E5; border-color: #00C8E5;"
                                     >
                                         Solicitar
                                     </button>
@@ -445,6 +449,7 @@
                                             class="btn btn-primary"
                                             data-bs-toggle="modal"
                                             data-bs-target="#modalCenter"
+                                            style="background-color: #00C8E5; border-color: #00C8E5;"
                                     >
                                         Solicitar
                                     </button>
@@ -493,7 +498,7 @@
         });
     });
 </script>
-    
+
 
 <!-- Overlay -->
 <div class="layout-overlay layout-menu-toggle"></div>
@@ -520,7 +525,7 @@
               <label >Sea enviará una notificación o un email para la reposición del producto: Cuaderno</label>
             </div>
           </div>
-          
+
         </div>
         <div class="modal-footer justify-content-center mx-2">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
@@ -535,15 +540,15 @@
     document.getElementById('solicitar-btn').addEventListener('click', function() {
       // Lógica de la solicitud (simulada con un console.log)
       console.log('Solicitud realizada con éxito');
-      
+
       // Cerrar el modal
       let modal = bootstrap.Modal.getInstance(document.getElementById('modalCenter'));
       modal.hide();
-      
+
       // Mostrar el banner de éxito
       let successBanner = document.getElementById('success-banner');
       successBanner.style.display = 'block';
-  
+
       // Ocultar el banner automáticamente después de 5 segundos
       setTimeout(function() {
         successBanner.style.display = 'none';
@@ -588,7 +593,7 @@
                       readonly
                     />
                 </div>
-                <div class="mb-3">     
+                <div class="mb-3">
                     <input
                       type="text"
                       id="emailWithTitle"
@@ -597,7 +602,7 @@
                       readonly
                     />
                 </div>
-                <div class="mb-3">             
+                <div class="mb-3">
                     <input
                       type="date"
                       id="dobWithTitle"
@@ -608,7 +613,7 @@
             </div>
           </div>
 
-          
+
         </div>
         <div class="modal-footer justify-content-center mx-2">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
@@ -619,7 +624,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
