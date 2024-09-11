@@ -64,19 +64,6 @@
 
     <style>
         
-       
-    
-        /* Estilos para centrar el contenido de la barra de herramientas ---*/
-        .fc-toolbar {
-            display: flex;
-            /*justify-content: center;*/
-            justify-content: space-between;
-            align-items: center;
-            margin-left: 0.5rem;
-
-        }
-    
-    
         /* Ajustar la altura de los eventos -------/
         .fc-event-container {
             max-height: 2em;
@@ -139,14 +126,14 @@
                 </li>
                 <!--Crear Agente -->
                 <li class="menu-item">
-                    <a href="inicio_coordinador_zonal.html" class="menu-link">
+                    <a href="crear_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-user-plus"></i>
                         <div data-i18n="Crear agente">Crear agente</div>
                     </a>
 
                 </li>
                 <li class="menu-item">
-                    <a href="inicio_coordinador_zonal.html" class="menu-link">
+                    <a href="importacion_zonal.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-import"></i>
                         <div data-i18n="Importaciones">Importaciones</div>
                     </a>
@@ -362,9 +349,9 @@
                                     <h4 class="text-thin ">Filtro por categoria</h4>
                                     <div id="event-filters col">
                                         <button class="btn btn-secondary filter-btn row my-1" data-type="all">Mostrar Todos</button>
-                                        <button class="btn btn-calendar-1 filter-btn row my-1" data-type="meeting">Reunión</button>
-                                        <button class="btn btn-calendar-2 filter-btn row my-1" data-type="workshop">Taller</button>
-                                        <button class="btn btn-calendar-3 filter-btn row my-1" data-type="conference">Conferencia</button>
+                                        <button class="btn btn-calendar-1 filter-btn row my-1" data-type="meeting">Ropa</button>
+                                        <button class="btn btn-calendar-2 filter-btn row my-1" data-type="workshop">Tecnologia</button>
+                                        <button class="btn btn-calendar-3 filter-btn row my-1" data-type="conference">Deportes</button>
                                         
                                     </div>
                                 </div>
@@ -438,7 +425,7 @@ $(document).ready(function() {
         events: [
             {
                 id:1,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-09',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',
@@ -447,7 +434,7 @@ $(document).ready(function() {
             },
             {
                 id:2,
-                title: 'Taller de Capacitación',
+                title: 'Llegada de tecnologia',
                 start: '2024-09-12',
                 type: 'workshop',
                 backgroundColor: '#c6aff9',
@@ -456,7 +443,7 @@ $(document).ready(function() {
             },
             {
                 id:3,
-                title: 'Conferencia Anual',
+                title: 'Llegada de deportivo',
                 start: '2024-09-15',
                 type: 'conference',
                 backgroundColor: '#f2d288',
@@ -465,7 +452,7 @@ $(document).ready(function() {
             },
             {
                 id:4,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',
@@ -474,7 +461,7 @@ $(document).ready(function() {
             },
             {
                 id:5,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 end: '2024-09-10',
                 type: 'meeting',
@@ -484,7 +471,7 @@ $(document).ready(function() {
             },
             {
                 id:6,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',
@@ -493,7 +480,7 @@ $(document).ready(function() {
             },
             {
                 id:7,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',
@@ -502,7 +489,7 @@ $(document).ready(function() {
             },
             {
                 id:7,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',
@@ -511,7 +498,7 @@ $(document).ready(function() {
             },
             {
                 id:8,
-                title: 'Reunión de Proyecto',
+                title: 'Llegada de ropa',
                 start: '2024-09-10',
                 type: 'meeting',
                 backgroundColor: '#d2eea3',

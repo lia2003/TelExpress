@@ -126,12 +126,19 @@
 
 /********************************************************************/
 /*calendario*/
+.panel{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.9rem;
+}
 
 /* Estilos personalizados para los botones de filtro -----*/
 .filter-btn {
   width: 80%; /* Ocupa todo el ancho disponible ----*/
   justify-content: flex-start;
   text-align:left;
+  margin-left: 0.2rem;
 }
 
 /* El cuadrado de color dentro del botón */
@@ -205,56 +212,29 @@
 
 
 .fc-toolbar h2, /* Esto afecta el título del mes */
-        .fc-day-header span { /* Esto afecta los días de la semana */
-        text-transform: capitalize; /* Capitaliza la primera letra */
+.fc-day-header span { /* Esto afecta los días de la semana */
+  text-transform: capitalize; /* Capitaliza la primera letra */
 }
-/* Centrar el título de los meses --------*/
-.fc-toolbar .h2 {
-  display:flex;
+.fc-day-header {
+  background-color: #eeeeee;
+}
+/* Centrar el título de los meses --------/
+.fc-toolbar-title {
+  flex-grow: 1;
   text-align: center;
   width: 100%;
- justify-content: center;
- padding-right: 0.5rem;
- padding-left:0.5rem;
-
+  justify-content: center;
 }
-
-
-/* Estilos para centrar el contenido de la barra de herramientas ---*/
+/*font-size: 18px; /* Ajusta el tamaño de la fuente si lo deseas /
+text-align: center;
+flex-grow: 1; 
+display:flex;*/
 .fc-toolbar {
-  display: flex;
-  /*justify-content: center;*/
-  justify-content: space-between;
-  align-items: center;
-
-}
- /* Estilos para los botones de filtro en una sola columna ---*/
- #event-filters {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Espaciado entre botones ---*/
+  margin-left: 0.8rem !important;
+  margin-right: 0.9rem !important;
+  
 }
 
 
-.fc-left{
-  order: 1; /*lleva las botones a la izquierda*/
-}
-.fc-center {
-  order: 2; /* Mantener el título en el centro */
-  text-align: right; /* Asegurar el centrado */
-  flex-grow: 3; /* Hace que el centro se expanda para forzar el centrado */
-}
- /* Estilizar el texto "+ more" ----*/
-.fc-more {
-  font-size: 12px; /* Tamaño pequeño ----*/
-  color: #4c75c2; /* Color gris ----*/
-  /*position: absolute;
-  bottom: 2px;
-  right: 5px;*/
-}
-/* Ajustes visuales generales -------*/
-.panel-body {
-  padding: 20px;
-} 
 
 
