@@ -31,3 +31,8 @@
   // Calling function on load
   autoPlayYouTubeModal();
 })();
+
+
+
+/*-----------------------------------------------*/
+/*modal de confirmacion para crear agente de zonal*/
