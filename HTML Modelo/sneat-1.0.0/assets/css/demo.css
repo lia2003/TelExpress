@@ -20,6 +20,7 @@
   text-transform: none;
 }
 
+
 /* ! For .layout-navbar-fixed added fix padding top tpo .layout-page */
 /* Detached navbar */
 .layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
@@ -119,7 +120,7 @@
 /*modifica el nombre de la pagina*/
 .desing-name{
   font-family: 'Poppins', sans-serif;
-  color:#7367F0;
+  color:#7367F0 !important;
   padding-left: 15px;
 
 }
