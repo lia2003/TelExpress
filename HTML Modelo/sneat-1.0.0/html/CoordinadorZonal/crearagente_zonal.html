@@ -79,12 +79,12 @@
 
             <!-- Contenedor para la imagen centrada -->
             <div style="text-align: center;">
-                <img src="logo.png" alt="Imagen" style="width: 150px; margin-bottom: -70px; margin-top: -20px">
+                <img src="../../assets/img/icons/unicons/logo.png" alt="Imagen" style="width: 150px; margin-bottom: -70px; margin-top: -20px">
             </div>
 
             <div class="app-brand demo" style="text-align: center;">
                 <a href="inicio_coordinador_zonal.html" class="app-brand-link">
-                    <span class="app-brand-text demo menu-text fw-bolder" style="font-family: 'Poppins', sans-serif; color: #7367F0; padding-left: 15px;">TelExpress</span>
+                    <span class="app-brand-text demo menu-text fw-bolder desing-name" >TelExpress</span>
                 </a>
 
                 <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -314,122 +314,139 @@
                 <div class="card">
                     <div class="card-body">
                         <!--FORMULARIO-->
-                        <div class="card mb-4">
-                            <h5 class="card-header">Formulario</h5>
-                            <div class="card-body">
-                                <!-- Nombre -->
-                                <div class="mb-3 row">
-                                    <label for="nombre-input" class="col-md-2 col-form-label">Nombre</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="nombre-input" placeholder="Ingrese nombre" />
+                        <form id="formCrearAgente">
+                            <div class="row">
+                                
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-nombre">Nombre:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control " id="basic-nombre" placeholder="Ingresa el nombre"
+                                        required/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Apellido -->
-                                <div class="mb-3 row">
-                                    <label for="apellido-input" class="col-md-2 col-form-label">Apellido</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="apellido-input" placeholder="Ingrese apellido" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-dni">DNI:</label>
+                                        <div class="col-md-10">
+                                        <input 
+                                        type="text" 
+                                        class="form-control "
+                                        id="basic-dni"
+                                        placeholder="Ingresa el DNI"
+                                        maxlength="8"
+                                        pattern="\d{8}"
+                                        oninput="this.value = this.value.replace(/\D/g, '')"
+                                        required/>
+                                        </div>
                                     </div>
-                                </div>
+                                        <!--div id="dniHelp" class="form-text text-danger" style="display:none;">Ingreso de datos incorrecto</div>
 
-                                <!-- DNI -->
-                                <div class="mb-3 row">
-                                    <label for="dni-input" class="col-md-2 col-form-label">DNI</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="dni-input" placeholder="Ingrese DNI" />
                                     </div>
-                                </div>
-
-                                <!-- Teléfono -->
-                                <div class="mb-3 row">
-                                    <label for="telefono-input" class="col-md-2 col-form-label">Teléfono</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="telefono-input" placeholder="Ingrese teléfono" />
+                                    <script>
+                                        document.getElementById('basic-dni').addEventListener('input', function() {
+                                            var input = this;
+                                            var helpText = document.getElementById('dniHelp');
+                                            var isValid = input.checkValidity();
+                                            
+                                            if (!isValid) {
+                                                helpText.style.display = 'block';
+                                            } else {
+                                                helpText.style.display = 'none';
+                                            }
+                                        });
+                                        </script-->
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-correo">Correo electrónico:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-correo" placeholder="Ingresa el email" 
+                                        pattern="[a-zA-Z0-9._%+-]+@"
+                                        required />
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Correo -->
-                                <div class="mb-3 row">
-                                    <label for="correo-input" class="col-md-2 col-form-label">Correo</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="email" id="correo-input" placeholder="Ingrese correo" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-ruc">RUC:</label>
+                                        <div class="col-md-10">
+                                        <input type="text"  class="form-control"    id="basic-ruc" 
+                                        placeholder="Ingresa el RUC" 
+                                        maxlength="11"
+                                        pattern="\d{11}"
+                                        oninput="this.value = this.value.replace(/\D/g, '')"
+                                        required/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Código de despachador -->
-                                <div class="mb-3 row">
-                                    <label for="codigo-despachador-input" class="col-md-2 col-form-label">Código de despachador</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="codigo-despachador-input" placeholder="Ingrese código" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-direccion">Dirección:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-direccion" placeholder="Ingresa la dirección" required/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- RUC -->
-                                <div class="mb-3 row">
-                                    <label for="ruc-input" class="col-md-2 col-form-label">RUC</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="ruc-input" placeholder="Ingrese RUC" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-codigo-jurisdiccion">Código de jurisdicción:</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="basic-codigo-jurisdiccion" placeholder="Ingresa el código de jurisdicción" required/>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <!-- Razón social -->
-                                <div class="mb-3 row">
-                                    <label for="razon-social-input" class="col-md-2 col-form-label">Razón Social</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="razon-social-input" placeholder="Ingrese razón social" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-apellido">Apellido:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-apellido" placeholder="Ingresa el apellido" required/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Dirección -->
-                                <div class="mb-3 row">
-                                    <label for="direccion-input" class="col-md-2 col-form-label">Dirección</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="direccion-input" placeholder="Ingrese dirección" />
+                                    <div class="mb-3 row ">
+                                        <label class="form-label col-md-2" for="basic-telefono">Telefono:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-telefono" placeholder="Ingresa el número telefónico"
+                                        maxlength="11"
+                                        oninput="this.value = this.value.replace(/\D/g, '')"
+                                        required/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Distrito (Desplegable) -->
-                                <div class="mb-3 row">
-                                    <label for="distrito-input" class="col-md-2 col-form-label">Distrito</label>
-                                    <div class="col-md-10">
-                                        <select class="form-control" id="distrito-input">
-                                            <option value="">Seleccione un distrito</option>
-                                            <option value="ancon">Ancón</option>
-                                            <option value="santa-rosa">Santa Rosa</option>
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-codigo-despachador">Código despachador:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-codigo-desachador" placeholder="Ingresa el código despachador" required/>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-razon-social">Razón Social :</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-razon-social" placeholder="Ingrese la razón social" required/>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-distrito">Distrito:</label>
+                                        <div class="col-md-10">
+                                        <select type="text" class="form-control form-select" id="basic-distrito" required>
+                                            <option disabled selected hidden>Seleccione un distrito</option>
+                                            <option value="ancon">Ancon</option>
+                                            <option value="santa rosa">Santa Rosa</option>
                                             <option value="carabayllo">Carabayllo</option>
-                                            <option value="puente-piedra">Puente Piedra</option>
+                                            <option value="puente piedra">Puente Piedra</option>
                                             <option value="comas">Comas</option>
-                                            <option value="los-olivos">Los Olivos</option>
-                                            <option value="san-martin">San Martín de Porres</option>
-                                            <option value="independencia">Independencia</option>
+                                            <option value="los olivos">Los Olivos</option>
+                                            <option value="san martin de porres">San Martin de Porres </option>
+                                            <option value="Independencia"> Independencia</option>
                                         </select>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Código de jurisdicción -->
-                                <div class="mb-3 row">
-                                    <label for="codigo-jurisdiccion-input" class="col-md-2 col-form-label">Código de Jurisdicción</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="codigo-jurisdiccion-input" placeholder="Ingrese código de jurisdicción" />
+                                    <div class="mb-3 row">
+                                        <label class="form-label col-md-2" for="basic-zona">Zona:</label>
+                                        <div class="col-md-10">
+                                        <input type="text" class="form-control" id="basic-zona" placeholder="Norte" value="Norte"readonly required style="background: linear-gradient(#ffffff75,#d8d8d885,#ffffff);"/>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Zona (No editable) -->
-                                <div class="mb-3 row">
-                                    <label for="zona-input" class="col-md-2 col-form-label">Zona</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" id="zona-input" value="Norte" readonly />
-                                    </div>
-                                </div>
+                            
+                                
                             </div>
-                        </div>
+                            <!-- BOTON DE CREAR AGENTE -->
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary " style="background-color: #e89b85; border-color: #e89b85; font-size: 17px; font-family: 'Poppins', sans-serif;">Enviar</button>
+                                <div id="errorMessages" class="text-danger mt-2" style="display: none;"></div>
+                            </div>
+                            <!--/ BOTON DE CREAR AGENTE -->
+                        </form>
                         <!--FORMULARIO-->
-                        <!-- BOTON DE CREAR AGENTE -->
-                        <div class="d-flex justify-content-center" style="margin-bottom: 1rem; margin-top:-10px">
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConfirmarSolicitud" style="background-color: #e89b85; border-color: #e89b85; font-size: 17px; font-family: 'Poppins', sans-serif;">Crear</a>
-                        </div>
-                        <!--/ BOTON DE CREAR AGENTE -->
+                        
                     </div>
                 </div>
             </div>
@@ -447,11 +464,11 @@
 
 
 <!-- Modal de Confirmación -->
-<div class="modal fade" id="modalConfirmarSolicitud" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="modalcrear" tabindex="-1"  aria-labelledby="confirmationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalCenterTitle" style="font-family: 'Poppins', sans-serif; font-size: 20px; text-align: center;">Confirmar solicitud</h5>
+                <h5 class="modal-title" id="confirmationModalLabel" style="font-family: 'Poppins', sans-serif; font-size: 20px; text-align: center;">Confirmar solicitud</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <hr class="my-4 " />
@@ -463,15 +480,65 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-center mx-2">
-                <a href="crearagente_zonal.html" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</a>
-                <a href="listaagente_zonal.html" class="btn btn-primary">Confirmar</a>
-            </div>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                  Cancelar
+                </button>
+                <button type="button" class="btn btn-primary" id="confirm-submit">Confirmar</button>
+              </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    document.getElementById('formCrearAgente').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío inmediato del formulario
 
+        // Obtener todos los inputs del formulario
+        const inputs = document.querySelectorAll('.form-control');
+        const errorMessages = document.getElementById('errorMessages');
+
+        // Variable para controlar si todos los campos son válidos
+        let allValid = true;
+
+        // Validar cada input
+        inputs.forEach((input) => {
+            // Trim para remover espacios en blanco del inicio y final
+            if (input.value.trim() === '' && input.id!='basic-zona') {
+                // Si está vacío o solo tiene espacios, es inválido
+                input.classList.add('is-invalid'); // Agregar clase para resaltar el error
+                allValid = false;
+            } else {
+                input.classList.remove('is-invalid'); // Remover clase si es válido
+            }
+        });
+
+        // Si algún campo es inválido, mostrar mensaje de error
+        if (!allValid) {
+            errorMessages.textContent='Por favor, completa todos los campos correctamente.';
+            errorMessages.style.display='block';
+            return;
+        }
+
+        // Si todos los campos son válidos, muestra el modal de confirmación
+        var confirmationModal = new bootstrap.Modal(document.getElementById('modalcrear'));
+        confirmationModal.show();
+    });
+
+    // Escuchar el botón de confirmar en el modal
+    document.getElementById('confirm-submit').addEventListener('click', function() {
+        document.getElementById('formCrearAgente').submit(); // Envía el formulario al confirmar
+    });
+
+    // Remover clase de error en cuanto el usuario empiece a escribir
+    document.querySelectorAll('.form-control').forEach((input) => {
+        input.addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                this.classList.remove('is-invalid');
+            }
+        });
+    });
+</script>
 
 
 
