@@ -236,5 +236,29 @@ display:flex;*/
 }
 
 
+<<<<<<< HEAD
+=======
+.fc-left{
+  order: 1; /*lleva las botones a la izquierda*/
+}
+.fc-center {
+  order: 2; /* Mantener el título en el centro */
+  text-align: right; /* Asegurar el centrado */
+  flex-grow: 3; /* Hace que el centro se expanda para forzar el centrado */
+}
+ /* Estilizar el texto "+ more" ----*/
+.fc-more {
+  font-size: 12px; /* Tamaño pequeño ----*/
+  color: #4c75c2; /* Color gris ----*/
+  /*position: absolute;
+  bottom: 2px;
+  right: 5px;*/
+}
+/* Ajustes visuales generales -------*/
+.panel-body {
+  padding: 20px;
+}
+
+>>>>>>> 78d03cc26d3cdb68c79c52d23d9e4d4099849726
 
 
