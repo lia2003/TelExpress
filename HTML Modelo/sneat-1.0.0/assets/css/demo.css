@@ -20,6 +20,7 @@
   text-transform: none;
 }
 
+
 /* ! For .layout-navbar-fixed added fix padding top tpo .layout-page */
 /* Detached navbar */
 .layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
@@ -106,3 +107,137 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+
+/* ESTILO PARA MENU */
+/**********************************************************/
+/*disenio de posicion y tamanio del logo*/
+.text-center>.menu-logo {
+  margin-bottom: -45px;
+  width: 150px;
+}
+
+/*modifica el nombre de la pagina*/
+.desing-name{
+  font-family: 'Poppins', sans-serif;
+  color:#7367F0 !important;
+  padding-left: 15px;
+
+}
+
+/********************************************************************/
+/*calendario*/
+.panel{
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Estilos personalizados para los botones de filtro -----*/
+.filter-btn {
+  width: 80%; /* Ocupa todo el ancho disponible ----*/
+  justify-content: flex-start;
+  text-align:left;
+  margin-left: 0.2rem;
+}
+
+/* El cuadrado de color dentro del botón */
+.filter-btn::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px; /* Para hacer los bordes del cuadrado ligeramente redondeados */
+}
+.filter-btn:hover{
+  border: #4c4c4d;
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="ropa"]::before {
+  background-color: #d2eea3; /* Color de Reunión */
+}
+
+.btn.btn-calendar-1 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+  justify-content: flex-start;
+}
+.btn.btn-calendar-1:hover {
+  color: #555555f1;
+  background-color: #d2eea3;
+  border-color: #83ec52;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="tecnologia"]::before {
+  background-color: #c6aff9; /* Color de Reunión */
+}
+
+.btn.btn-calendar-2 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+  justify-content: flex-start;
+}
+.btn.btn-calendar-2:hover {
+  color: #555555f1;
+  background-color: #c6aff9;
+  border-color: #b18ff8;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Color de fondo del cuadrado según el tipo de evento */
+.filter-btn[data-type="deporte"]::before {
+  background-color: #f2d288; /* Color de Reunión */
+}
+
+.btn.btn-calendar-3 {
+  color: #555555f1;
+  border-color: #fffff3;
+  background: transparent;
+}
+.btn.btn-calendar-3:hover {
+  color: #555555f1;
+  background-color: #f2d288;
+  border-color: #f8ba2a;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+  transform: translateY(-1px);
+}
+
+
+.fc-toolbar h2, /* Esto afecta el título del mes */
+.fc-day-header span { /* Esto afecta los días de la semana */
+  text-transform: capitalize; /* Capitaliza la primera letra */
+}
+.fc-day-header {
+  background-color: #eeeeee;
+}
+/* Centrar el título de los meses --------/
+.fc-toolbar-title {
+  flex-grow: 1;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+/*font-size: 18px; /* Ajusta el tamaño de la fuente si lo deseas /
+text-align: center;
+flex-grow: 1; 
+display:flex;*/
+.fc-toolbar {
+  margin-left: 0.8rem !important;
+  margin-right: 0.9rem !important;
+  
+}
+
+.fc-event{
+  margin-bottom: 0.2rem !important;
+}
+
+
