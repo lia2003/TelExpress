@@ -298,7 +298,6 @@
       <!-- Content wrapper -->
       <div class="content-wrapper">
         <!-- Content -->
-
         <div class="container-xxl flex-grow-1 container-p-y">
 
 
@@ -306,7 +305,6 @@
 
             <!-- Tabla 1 -->
             <div class="col-12 col-lg-12 order-2 order-md-3 order-lg-2 mb-4">
-              <!-- Bootstrap Table with Header - Light -->
               <div class="card">
                 <h5 class="card-header">Usuarios</h5>
                 <div class="table-responsive text-nowrap">
@@ -330,28 +328,14 @@
               <br>
               <div>
                 <nav aria-label="Page navigation example">
-                  <ul class="pagination justify-content-end">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous" onclick="prevPage()">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(3)">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next" onclick="nextPage()">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
+                  <ul class="pagination justify-content-center" id="pagination">
+                    <!-- Aquí se generará dinámicamente la paginación -->
                   </ul>
                 </nav>
               </div>
-              <!-- Bootstrap Table with Header - Light -->
             </div>
 
             <script>
-              // Lista de usuarios
               const users = [
                 { name: 'Albert', surname: 'Cook', email: 'Albert Cook', dni: '01234567', address: 'Angular Project' },
                 { name: 'Barry', surname: 'Hunter', email: 'Barry Hunter', dni: '01234567', address: 'React Project' },
@@ -376,6 +360,7 @@
 
               let currentPage = 1;
               const rowsPerPage = 5;
+              const totalPages = Math.ceil(users.length / rowsPerPage);
 
               // Función para mostrar los usuarios de la página actual
               function displayUsers(usersToShow) {
@@ -407,11 +392,55 @@
 
               // Función para cambiar de página
               function changePage(page) {
+                if (page < 1 || page > totalPages) return;
+
                 const start = (page - 1) * rowsPerPage;
                 const end = start + rowsPerPage;
                 const usersToShow = users.slice(start, end);
                 displayUsers(usersToShow);
+
                 currentPage = page;
+                updatePagination();
+              }
+
+              // Función para actualizar la paginación
+              function updatePagination() {
+                const pagination = document.getElementById('pagination');
+                pagination.innerHTML = ''; // Limpiar paginación
+
+                // Botón "Anterior"
+                const prevItem = `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <a class="page-link" href="#" aria-label="Previous" onclick="prevPage()">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>`;
+                pagination.innerHTML += prevItem;
+
+                // Mostrar 3 números en la paginación, con la página actual en el centro si es posible
+                let startPage = Math.max(1, currentPage - 1);
+                let endPage = Math.min(totalPages, currentPage + 1);
+
+                // Ajustar si estamos al principio o al final de las páginas
+                if (currentPage === 1) {
+                  endPage = Math.min(totalPages, 3);
+                } else if (currentPage === totalPages) {
+                  startPage = Math.max(1, totalPages - 2);
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                  const pageItem = `<li class="page-item ${i === currentPage ? 'active' : ''}">
+        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+      </li>`;
+                  pagination.innerHTML += pageItem;
+                }
+
+                // Botón "Siguiente"
+                const nextItem = `<li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+      <a class="page-link" href="#" aria-label="Next" onclick="nextPage()">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>`;
+                pagination.innerHTML += nextItem;
               }
 
               // Función para ir a la página anterior
@@ -423,7 +452,7 @@
 
               // Función para ir a la página siguiente
               function nextPage() {
-                if (currentPage < Math.ceil(users.length / rowsPerPage)) {
+                if (currentPage < totalPages) {
                   changePage(currentPage + 1);
                 }
               }
@@ -431,6 +460,8 @@
               // Mostrar la primera página al cargar
               changePage(1);
             </script>
+
+
 
             <!--/ Tabla 1 -->
 
