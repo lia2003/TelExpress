@@ -82,14 +82,14 @@
 
       <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+        <li class="menu-item">
           <a href="inicio_agente.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div data-i18n="Inicio">Inicio</div>
           </a>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item active">
           <a href="usuarios_agente.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-user"></i>
             <div data-i18n="ListaDeUsuarios">Lista de usuarios</div>
@@ -307,29 +307,72 @@
           <div class="card">
             <div class="card-body">
 
-              <h4 style="font-family: 'Poppins', sans-serif; color: #7367F0; font-weight: bold; padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 1rem; text-align: center; font-size: 40px;">
-                ¡Bienvenido agente!
-              </h4>
-
-              <!-- Añadimos margen superior al segundo h4 -->
-              <h4 class="mb-2" style="margin-top: 20px; margin-bottom: -20px; font-size: 20px; font-family: 'Poppins', sans-serif; font-weight: 100">
-                En esta sección, podrás ver algunas funciones que puedes realizar como agente.
-              </h4>
-
-              <!-- Contenedor flexbox para alinear el texto y la imagen -->
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: -60px">
-                <!-- Banner con el texto de funciones a la izquierda -->
-                <div style="background-color: #6DC8C2; padding: 20px; border-radius: 10px; width: 60%;">
-                  <p style="font-size:20px; color: white; font-family: 'Poppins', sans-serif; font-weight: 100;">
-                    Funciones:
-                    <br>1. Ver lista de todos los usuarios.
-                    <br>2. Poder banear a los usuarios.
-                    <br>3. Chatear con los usuarios
-                    <br>4. Responder dudas de los usuarios
-                  </p>
+              <!-- TABLA -->
+              <div class="card">
+                <h5 class="card-header">Lista de usuarios</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>N°</th>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                      <th>Chatear</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                    <tr>
+                      <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1</strong></td>
+                      <td>Albert </td>
+                      <td>Cook</td>
+                      <td>
+                        <a href="perfilagente_zonal.html" class="btn p-0" style="background-color: #0ccd90; padding: 10px; border-radius: 5px;">
+                          <i class="bx bx-chat" style="font-size: 1.5rem; color: white; padding:7px"></i><!-- Ícono de chat -->
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>2</strong></td>
+                      <td>Barry</td>
+                      <td>Hunter</td>
+                      <td>
+                        <a href="perfilagente_zonal.html" class="btn p-0" style="background-color: #0ccd90; padding: 10px; border-radius: 5px;">
+                          <i class="bx bx-chat" style="font-size: 1.5rem; color: white; padding:7px"></i><!-- Ícono de chat -->
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>3</strong></td>
+                      <td>Trevor</td>
+                      <td>
+                        Baker
+                      </td>
+                      <td>
+                        <a href="perfilagente_zonal.html" class="btn p-0" style="background-color: #0ccd90; padding: 10px; border-radius: 5px;">
+                          <i class="bx bx-chat" style="font-size: 1.5rem; color: white; padding:7px"></i><!-- Ícono de chat -->
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>4</strong>
+                      </td>
+                      <td>Jerry</td>
+                      <td>
+                        Milton
+                      </td>
+                      <td>
+                        <a href="perfilagente_zonal.html" class="btn p-0" style="background-color: #0ccd90; padding: 10px; border-radius: 5px;">
+                          <i class="bx bx-chat" style="font-size: 1.5rem; color: white; padding:7px"></i><!-- Ícono de chat -->
+                        </a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <!-- Imagen alineada a la derecha -->
-                <img src="inicio_agente.png" alt="Imagen" style="width: 400px; margin-left: 20px;">
+              </div>
+              <!--/ TABLA -->
+
               </div>
             </div>
           </div>
