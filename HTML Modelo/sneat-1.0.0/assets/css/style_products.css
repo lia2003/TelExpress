@@ -187,6 +187,7 @@ body {
     background: #FFF;
     border: 1px solid #E4E7ED;
     height: 40px;
+    border-radius: 10%;
   }
   
   /*-- checkbox & radio input --*/
@@ -1432,7 +1433,7 @@ body {
   }
   
   #product-imgs .product-preview.slick-current {
-    border-color: #D10024;
+    border-color: #4734b4;
   }
   
   #product-imgs .slick-prev {
@@ -1486,15 +1487,16 @@ body {
   }
   
   .product-details .review-link {
-    font-size: 12px;
+    font-size: 1.1rem;
+    color:#38229b
   }
   
   .product-details .product-price {
     display: inline-block;
-    font-size: 24px;
+    font-size: 2.2rem;
     margin-top: 10px;
     margin-bottom: 15px;
-    color: #D10024;
+    color: #0d1031;
   }
   
   .product-details .product-price .product-old-price {
@@ -1504,11 +1506,11 @@ body {
   }
   
   .product-details .product-available {
-    font-size: 12px;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bold;
     margin-left: 30px;
-    color: #D10024;
+    color: #0d3488;
   }
   
   .product-details .product-options {
@@ -1525,7 +1527,7 @@ body {
   }
   
   .product-details .product-options .input-select {
-    width: 90px;
+    width: 80%;
   }
   
   .product-details .add-to-cart {
@@ -1601,7 +1603,16 @@ body {
   .product-details .product-links li {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.0rem;
+  }
+  .product-details .product-links li :hover{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #ffff; /* Cambia el color del texto al pasar el mouse */
+    background-color: #c0c0c0; /* Fondo de resaltado opcional */
+    padding: 5px; /* Añade padding para el área de resaltado */
+    border-radius: 5px; /* Bordes redondeados opcionales */
   }
   
   .product-details .product-links li+li {
