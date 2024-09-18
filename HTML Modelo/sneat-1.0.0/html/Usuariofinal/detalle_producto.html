@@ -75,6 +75,16 @@
  		<link type="text/css" rel="stylesheet" href="../../assets/css/slick.css"/>
  		<link type="text/css" rel="stylesheet" href="../../assets/css/slick-theme.css"/>
 
+    <!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery (opcional si usas Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
     <style>
         
     </style>
@@ -114,14 +124,14 @@
                     </a>
                 </li>
 
-                <li class="menu-item active">
+                <li class="menu-item ">
                     <a href="lista_pedidos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Start">Mis Pedidos</div>
                     </a>
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item active ">
                     <a href="lista_productos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Tienda">Tienda</div>
@@ -422,7 +432,8 @@
                             <!-- Product details -->
                             <div class="col-md-5">
                                 <div class="product-details">
-                                    <h2 class="product-name">Laptop</h2>
+                                    <h3 class="product-name" style="font-weight:bold;">Laptop</h2>
+                                    <p style="text-transform: uppercase;">código: 345678909</p>
                                     <div>
                                         <div class="product-rating">
                                             <i class="bi bi-star-fill text-warning fs-2"></i>
@@ -437,7 +448,7 @@
                                         <h3 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h3>
                                         <span class="product-available">En Stock</span>
                                     </div>
-                                    <p>Descripcion de la laptop , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>Descripcion de la laptop, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                                     <div class="product-options">
                                         
@@ -460,8 +471,10 @@
                                                 <span class="qty-down">-</span>
                                             </div>
                                         </div>
+                                      
+                                        <!-- Button to open the modal -->
+                                        <button class="add-to-cart-btn" data-bs-toggle="modal" data-bs-target="#productModal"><i class="bx bx-plus"></i> Agregar</button>
                                         
-                                        <button class="add-to-cart-btn"><i class="bx bx-plus"></i> agregar</button>
                                     </div>
                                     <a class="review-link" href="#"> Reseñas(10)</a>
 
@@ -497,9 +510,6 @@
 
 
 
-
-
-
                 </div>
             </div>
 
@@ -516,127 +526,73 @@
 </div>
 <!-- / Layout wrapper -->
 
- <!-- Modal solicitar-->
- <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="modalCenterTitle" style="font-family: 'Poppins', sans-serif; font-size: 20px; text-align: center;">Solicitar reposición al Administrador</h5>
-            <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <hr class="my-4 " />
-        <div class="modal-body">
-          <div class="row">
-            <div class="col mb-3">
-              <label >Sea enviará una notificación o un email para la reposición del producto: Cuaderno</label>
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Carrito en espera</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-
+            <div class="modal-body">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="border-bottom">
+                            <th>Seleccionar</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Código</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Monto Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-bottom">
+                            <td><input type="checkbox"></td>
+                            <td><img src="../../assets/img/elements/product01.png" alt="Producto" class="img-thumbnail" width="100"></td>
+                            <td>Laptop</td>
+                            <td>345678909</td>
+                            <td>$980.00</td>
+                            <td><input type="number" class="form-control" value="1" min="1"></td>
+                            <td>$980.00</td>
+                        </tr>
+                        <!-- Puedes agregar más filas si es necesario -->
+                    </tbody>
+                </table>
+                <!-- Campos adicionales fuera de la tabla, alineados -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6 text-end">
+                            <p><strong>Precio Total:</strong> $980.00</p>
+                            <p><strong>Delivery:</strong> S/. 15.00</p>
+                            <hr>
+                            <p><strong>Total General:</strong> S/. 995.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-primary">Importar</button>
+                
+            </div>
         </div>
-        <div class="modal-footer justify-content-center mx-2">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-            Cancelar
-          </button>
-          <button type="button" class="btn btn-primary" id="solicitar-btn">Solicitar</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+
+
   <script>
-    document.getElementById('solicitar-btn').addEventListener('click', function() {
-      // Lógica de la solicitud (simulada con un console.log)
-      console.log('Solicitud realizada con éxito');
-
-      // Cerrar el modal
-      let modal = bootstrap.Modal.getInstance(document.getElementById('modalCenter'));
-      modal.hide();
-
-      // Mostrar el banner de éxito
-      let successBanner = document.getElementById('success-banner');
-      successBanner.style.display = 'block';
-
-      // Ocultar el banner automáticamente después de 5 segundos
-      setTimeout(function() {
-        successBanner.style.display = 'none';
-      }, 3000); // 3000 ms = 3 segundos
+  // Este script es opcional, solo si necesitas lógica para actualizar el monto total basado en la cantidad.
+document.querySelectorAll('input[type="number"]').forEach(input => {
+    input.addEventListener('change', function() {
+        const row = this.closest('tr');
+        const price = parseFloat(row.cells[4].textContent.replace('$', ''));
+        const quantity = parseInt(this.value);
+        row.cells[6].textContent = `$${(price * quantity).toFixed(2)}`;
     });
-  </script>
-
-  <!-- Modal fecha arribo -->
-  <div class="modal fade" id="fechaModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalCenterTitle">Fecha de descarga</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <hr class="my-4">
-        <div class="modal-body">
-          <div class="row ">
-            <div class="col-md-6">
-                <div class="mb-3">
-                <label for="nameWithTitle" class="form-label ">Producto:</label>
-                </div>
-                <div class="mb-3">
-                    <label for="emailWithTitle" class="form-label ">Categoria:</label>
-                </div>
-                <div class="mb-3">
-                    <label for="dobWithTitle" class="form-label ">Fecha de arribo:</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <input
-                      type="text"
-                      id="nameWithTitle"
-                      class="form-control"
-                      placeholder="Cuaderno"
-                      readonly
-                    />
-                </div>
-                <div class="mb-3">
-                    <input
-                      type="text"
-                      id="emailWithTitle"
-                      class="form-control"
-                      placeholder="Educativo"
-                      readonly
-                    />
-                </div>
-                <div class="mb-3">
-                    <input
-                      type="date"
-                      id="dobWithTitle"
-                      class="form-control"
-                      placeholder="DD / MM / YY"
-                    />
-                </div>
-            </div>
-          </div>
-
-
-        </div>
-        <div class="modal-footer justify-content-center mx-2">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-              Cancelar
-            </button>
-            <button type="button" class="btn btn-primary" id="duardar-btn" data-bs-dismiss="modal">Guardar</button>
-          </div>
-      </div>
-    </div>
-  </div>
-
-
+});</script>
+  
 
 
 <!-- Core JS -->
@@ -663,5 +619,9 @@
 
 <script src="../../assets/js/slick.min.js"></script>
 <script  src="../../assets/js/product-user.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
