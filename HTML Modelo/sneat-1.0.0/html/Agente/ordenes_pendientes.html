@@ -80,7 +80,7 @@
 
             <ul class="menu-inner py-1">
                 <!-- Dashboard -->
-                <li class="menu-item active">
+                <li class="menu-item ">
                     <a href="inicio_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Inicio">Inicio</div>
@@ -88,14 +88,14 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="dashboard_superadmin.html" class="menu-link">
+                    <a href="usuarios_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-user"></i>
                         <div data-i18n="ListaDeUsuarios">Lista de usuarios</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="dashboard_superadmin.html" class="menu-link">
+                    <a href="chat_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-chat"></i>
                         <div data-i18n="Chats">Chats</div>
                     </a>
@@ -105,7 +105,7 @@
                 <li class="menu-header small text-uppercase">
                   <span class="menu-header-text">Páginas</span>
                 </li>-->
-                <li class="menu-item">
+                <li class="menu-item active">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-cart-alt"></i>
                         <div data-i18n="Órdenes">Órdenes</div>
@@ -121,7 +121,7 @@
                                 <div data-i18n="OrdenesSinAsignar">Órdenes sin asignar</div>
                             </a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item active">
                             <a href="ordenes_pendientes.html" class="menu-link">
                                 <div data-i18n="OrdenesPendientes">Órdenes pendientes</div>
                             </a>
@@ -142,7 +142,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="inventario_superadmin.html" class="menu-link">
+                    <a href="usuarios_baneados.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-block"></i>
                         <div data-i18n="UsuariosBaneados">Usuarios baneados</div>
                     </a>
@@ -317,7 +317,8 @@
                                             <th>Método de Envío</th>
                                             <th>Estado</th>
                                             <th>Fecha</th>
-                                        </tr> </thead>
+                                        </tr>
+                                        </thead>
                                         <tbody>
                                         <!-- Orden 1 -->
                                         <tr>
@@ -327,7 +328,7 @@
                                             <td>$150</td>
                                             <td>Aéreo</td>
                                             <td>
-                                                <span class="badge bg-label-warning">Creado</span>
+                                                <span class="badge bg-label-danger">En Validación</span>
                                             </td>
                                             <td>2024-09-01</td>
                                         </tr>
@@ -349,7 +350,7 @@
                                             <td>MXN</td>
                                             <td>$5000</td>
                                             <td>Terrestre</td>
-                                            <td><span class="badge bg-label-primary">En Proceso</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-02</td>
                                         </tr>
 
@@ -360,7 +361,7 @@
                                             <td>USD</td>
                                             <td>$800</td>
                                             <td>Aéreo</td>
-                                            <td><span class="badge bg-label-dark">Arribo al País</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-03</td>
                                         </tr>
 
@@ -371,7 +372,7 @@
                                             <td>EUR</td>
                                             <td>€300</td>
                                             <td>Marítimo</td>
-                                            <td><span class="badge bg-label-secondary">En Aduanas</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-08-29</td>
                                         </tr>
 
@@ -382,7 +383,7 @@
                                             <td>MXN</td>
                                             <td>$7000</td>
                                             <td>Terrestre</td>
-                                            <td><span class="badge bg-label-info">En Ruta</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-04</td>
                                         </tr>
 
@@ -393,7 +394,7 @@
                                             <td>USD</td>
                                             <td>$600</td>
                                             <td>Aéreo</td>
-                                            <td><span class="badge bg-label-success">Recibido</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-05</td>
                                         </tr>
 
@@ -415,7 +416,7 @@
                                             <td>MXN</td>
                                             <td>$4000</td>
                                             <td>Terrestre</td>
-                                            <td><span class="badge bg-label-primary">En Proceso</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-07</td>
                                         </tr>
 
@@ -426,12 +427,10 @@
                                             <td>USD</td>
                                             <td>$1200</td>
                                             <td>Aéreo</td>
-                                            <td><span class="badge bg-label-success">Recibido</span></td>
+                                            <td><span class="badge bg-label-danger">En Validación</span></td>
                                             <td>2024-09-08</td>
                                         </tr>
                                         </tbody>
-
-
                                     </table>
                                 </div>
 
@@ -440,7 +439,7 @@
 
                                 <!-- Paginación -->
                                 <nav aria-label="Page navigation">
-                                    <ul class="pagination justify-content-end">
+                                    <ul class="pagination justify-content-center">
                                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                                         <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -463,6 +462,8 @@
 </div>
 <!-- / Layout wrapper -->
 
+<!--TelExpress fuente de letra-->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 <!-- Core JS -->

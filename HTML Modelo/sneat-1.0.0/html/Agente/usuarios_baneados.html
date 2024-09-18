@@ -16,12 +16,12 @@
             content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Órdenes Agente</title>
+    <title>Usuarios Baneados</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../html/Imagenes/logo.png"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,8 +31,11 @@
             rel="stylesheet"
     />
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
+
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="../../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -52,9 +55,6 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../assets/js/config.js"></script>
-    <!--TelExpress fuente de letra-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <!-- Layout wrapper -->
@@ -83,14 +83,14 @@
 
             <ul class="menu-inner py-1">
                 <!-- Dashboard -->
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="inicio_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Inicio">Inicio</div>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item ">
                     <a href="usuarios_agente.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-user"></i>
                         <div data-i18n="ListaDeUsuarios">Lista de usuarios</div>
@@ -108,13 +108,13 @@
                 <li class="menu-header small text-uppercase">
                   <span class="menu-header-text">Páginas</span>
                 </li>-->
-                <li class="menu-item active">
+                <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-cart-alt"></i>
                         <div data-i18n="Órdenes">Órdenes</div>
                     </a>
                     <ul class="menu-sub">
-                        <li class="menu-item active">
+                        <li class="menu-item">
                             <a href="ordenes_agente.html" class="menu-link">
                                 <div data-i18n="TodasLasOrdenes">Todas las órdenes</div>
                             </a>
@@ -144,7 +144,7 @@
                     </ul>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item active">
                     <a href="usuarios_baneados.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-block"></i>
                         <div data-i18n="UsuariosBaneados">Usuarios baneados</div>
@@ -252,7 +252,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="perfil_agente.html">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
                                                 <div class="avatar avatar-online">
@@ -260,6 +260,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
+
                                                 <span class="fw-semibold d-block">Juanito Jun</span>
                                                 <small class="text-muted">Agente</small>
                                             </div>
@@ -270,13 +271,13 @@
                                     <div class="dropdown-divider"></div>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../Sistema/cambio_contraseña.html">
+                                    <a class="dropdown-item" href="cambio_contra_agente.html">
                                         <i class="bx bx-user me-2"></i>
                                         <span class="align-middle">Cambio de Contraseña</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="ajustes.html">
+                                    <a class="dropdown-item" href="ajustes_superadmin.html">
                                         <i class="bx bx-cog me-2"></i>
                                         <span class="align-middle">Ajustes</span>
                                     </a>
@@ -303,165 +304,187 @@
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 <div class="container-xxl flex-grow-1 container-p-y">
+                    <!-- Search bar with button (only visual) -->
+                    <div class="p-3 d-flex">
+                        <input type="text" id="searchInput" class="form-control me-2" placeholder="Buscar por nombre o apellido...">
+                        <button id="searchBtn" class="btn btn-primary">Buscar</button>
+                    </div>
                     <!-- Tabla de productos -->
-                        <div class="col-12 col-lg-12 mb-4">
-                            <div class="card">
-                                <h5 class="card-header">Órdenes</h5>
-                                <div class="table-responsive text-nowrap">
-                                    <table class="table table-striped">
-                                        <thead class="table-light">
+                    <div class="col-12 col-lg-12 mb-4">
+                        <div class="card">
+                            <h5 class="card-header">Usuarios Baneados</h5>
+                            <div class="table-responsive text-nowrap">
+                                <!-- Tabla de usuarios -->
+                                <table class="table table-striped">
+                                    <thead>
                                     <tr>
                                         <th>N°</th>
-                                        <th>Cliente</th>
-                                        <th>Moneda</th>
-                                        <th>Total</th>
-                                        <th>Método de Envío</th>
-                                        <th>Estado</th>
-                                        <th>Fecha</th>
-                                    </tr> </thead>
-                                        <tbody>
-                                        <!-- Orden 1 -->
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Cliente A</td>
-                                            <td>USD</td>
-                                            <td>$150</td>
-                                            <td>Aéreo</td>
-                                            <td>
-                                                <span class="badge bg-label-warning">Creado</span>
-                                            </td>
-                                            <td>2024-09-01</td>
-                                        </tr>
-                                        <!-- Orden 2 -->
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Cliente B</td>
-                                            <td>EUR</td>
-                                            <td>€200</td>
-                                            <td>Marítimo</td>
-                                            <td><span class="badge bg-label-danger">En Validación</span></td>
-                                            <td>2024-08-30</td>
-                                        </tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo</th>
+                                        <th>Motivo</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="table-border-bottom-0">
+                                    <!-- Usuario 1 -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Albert</td>
+                                        <td>Cook</td>
+                                        <td>albert.cook@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario realizó múltiples devoluciones injustificadas.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 2 -->
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Barry</td>
+                                        <td>Hunter</td>
+                                        <td>barry.hunter@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario fue baneado por intentar realizar compras con tarjetas fraudulentas.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 3 -->
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Trevor</td>
+                                        <td>Baker</td>
+                                        <td>trevor.baker@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario dejó varias reseñas ofensivas y abusivas.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 4 -->
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Jerry</td>
+                                        <td>Milton</td>
+                                        <td>jerry.milton@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario incumplió repetidamente las normas de la comunidad.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 5 -->
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Alice</td>
+                                        <td>Smith</td>
+                                        <td>alice.smith@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario realizó varias órdenes falsas en la plataforma.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 6 -->
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Mark</td>
+                                        <td>Johnson</td>
+                                        <td>mark.johnson@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario utilizó lenguaje inapropiado en comunicaciones con el soporte.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 7 -->
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Emily</td>
+                                        <td>Brown</td>
+                                        <td>emily.brown@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario hizo abuso del sistema de puntos y recompensas.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 8 -->
+                                    <tr>
+                                        <td>8</td>
+                                        <td>David</td>
+                                        <td>Wilson</td>
+                                        <td>david.wilson@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario fue detectado vendiendo productos falsificados.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 9 -->
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Jessica</td>
+                                        <td>White</td>
+                                        <td>jessica.white@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario intentó evadir impuestos en varias compras.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Usuario 10 -->
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Michael</td>
+                                        <td>Moore</td>
+                                        <td>michael.moore@example.com</td>
+                                        <td>
+                                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="setModalContent('El usuario fue baneado por múltiples cuentas fraudulentas.')">Ver Motivo</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
-                                        <!-- Orden 3 -->
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Cliente C</td>
-                                            <td>MXN</td>
-                                            <td>$5000</td>
-                                            <td>Terrestre</td>
-                                            <td><span class="badge bg-label-primary">En Proceso</span></td>
-                                            <td>2024-09-02</td>
-                                        </tr>
-
-                                        <!-- Orden 4 -->
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Cliente D</td>
-                                            <td>USD</td>
-                                            <td>$800</td>
-                                            <td>Aéreo</td>
-                                            <td><span class="badge bg-label-dark">Arribo al País</span></td>
-                                            <td>2024-09-03</td>
-                                        </tr>
-
-                                        <!-- Orden 5 -->
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Cliente E</td>
-                                            <td>EUR</td>
-                                            <td>€300</td>
-                                            <td>Marítimo</td>
-                                            <td><span class="badge bg-label-secondary">En Aduanas</span></td>
-                                            <td>2024-08-29</td>
-                                        </tr>
-
-                                        <!-- Orden 6 -->
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Cliente F</td>
-                                            <td>MXN</td>
-                                            <td>$7000</td>
-                                            <td>Terrestre</td>
-                                            <td><span class="badge bg-label-info">En Ruta</span></td>
-                                            <td>2024-09-04</td>
-                                        </tr>
-
-                                        <!-- Orden 7 -->
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Cliente G</td>
-                                            <td>USD</td>
-                                            <td>$600</td>
-                                            <td>Aéreo</td>
-                                            <td><span class="badge bg-label-success">Recibido</span></td>
-                                            <td>2024-09-05</td>
-                                        </tr>
-
-                                        <!-- Orden 8 -->
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Cliente H</td>
-                                            <td>EUR</td>
-                                            <td>€450</td>
-                                            <td>Marítimo</td>
-                                            <td><span class="badge bg-label-danger">En Validación</span></td>
-                                            <td>2024-09-06</td>
-                                        </tr>
-
-                                        <!-- Orden 9 -->
-                                        <tr>
-                                            <td>9</td>
-                                            <td>Cliente I</td>
-                                            <td>MXN</td>
-                                            <td>$4000</td>
-                                            <td>Terrestre</td>
-                                            <td><span class="badge bg-label-primary">En Proceso</span></td>
-                                            <td>2024-09-07</td>
-                                        </tr>
-
-                                        <!-- Orden 10 -->
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Cliente J</td>
-                                            <td>USD</td>
-                                            <td>$1200</td>
-                                            <td>Aéreo</td>
-                                            <td><span class="badge bg-label-success">Recibido</span></td>
-                                            <td>2024-09-08</td>
-                                        </tr>
-                                        </tbody>
-
-
-                                    </table>
+                                <!-- Modal -->
+                                <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal más grande -->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirmModalLabel">Motivo de Baneo</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="modalContent">
+                                                Motivo motivo motivo
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
 
 
 
-                                <!-- Paginación -->
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    </ul>
-                                </nav>
-
+                                <script>
+                                    function setModalContent(motivo) {
+                                        document.getElementById('modalContent').innerText = motivo;
+                                    }
+                                </script>
                             </div>
+
+
+
+
+                            <!-- Paginación -->
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                </ul>
+                            </nav>
+
                         </div>
+                    </div>
                 </div>
             </div>
             <!-- Content wrapper -->
         </div>
-        <!-- / Layout page -->
-    </div>
+        <!-- /Aquí termina el contenido central -->
 
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout page -->
 </div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+
 <!-- / Layout wrapper -->
 
+<!--TelExpress fuente de letra-->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 <!-- Core JS -->
