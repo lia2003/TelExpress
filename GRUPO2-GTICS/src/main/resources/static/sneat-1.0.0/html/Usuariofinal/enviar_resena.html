@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Chat</title>
+    <title>Enviar Reseña</title>
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
     <link rel="stylesheet" href="../../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -14,212 +14,96 @@
     <script src="../../assets/vendor/js/helpers.js"></script>
     <script src="../../assets/js/config.js"></script>
     <style>
-        /* Custom styles for status labels */
-        .status-label {
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: bold;
-        }
-        .validacion { background-color: #d1bf00; }
-
-        /* Sidebar icons */
-        .menu-icon {
-            margin-right: 8px;
-        }
-
-        /* Table styling */
-        .table-bordered th, .table-bordered td {
-            border: 1px solid #dee2e6;
-        }
-
-        /* Product images */
-        .product-img {
-            width: 50px;
-            height: auto;
-        }
-
-        /* Communication Section */
-        .communication-section {
-            margin-top: 20px;
+        /* Custom styles */
+        .product-buttons {
             display: flex;
-            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        /* Shipping and Payment Details */
-        .details-box {
-            border: 1px solid #ccc;
+        .product-buttons button {
+            background-color: #ececec;
+            border: none;
             padding: 10px;
-            margin-top: 20px;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        /* Form styles */
-        .details-box form {
-            display: flex;
-            flex-direction: column;
+        .product-buttons button:hover {
+            background-color: #d4d4d4;
         }
 
-        .details-box label {
+        .review-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+
+        .review-form .file-upload {
             margin-top: 10px;
         }
 
-        .details-box input {
-            padding: 5px;
-            margin-top: 5px;
+        .review-form .file-upload input {
+            display: none;
+        }
+
+        .file-upload label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .star-rating i {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .star-rating i.selected {
+            color: #ffc107;
         }
 
         /* Buttons */
-        .btn-modify {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-right: 10px;
-            text-decoration: none;
-        }
-
-        .btn-modify:hover {
-            background-color: #0056b3;
-        }
-
-        .btn-delete {
+        .btn-cancel {
             background-color: #dc3545;
             color: #fff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
+            margin-right: 10px;
         }
 
-        .btn-delete:hover {
-            background-color: #c82333;
-        }
-
-        .btn-save {
+        .btn-submit {
             background-color: #007bff;
             color: #fff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            margin-top: 10px;
-            align-self: flex-start;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block; /* Make it inline-block for button styling */
         }
 
-        .btn-save:hover {
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+
+        .btn-submit:hover {
             background-color: #0056b3;
         }
-
-        /* Chat Interface Styles */
-        .chat-wrapper {
-            display: flex;
-            width: 100%;
-            height: 80vh;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        /* Sidebar */
-        .chat-sidebar {
-            width: 25%;
-            background-color: #f8f8f8;
-            border-right: 1px solid #ddd;
-            padding: 20px;
-        }
-
-        .chat-sidebar h4 {
-            margin-top: 0;
-        }
-
-        .contact {
-            padding: 10px;
-            margin-bottom: 5px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .contact:hover {
-            background-color: #ced4da;
-        }
-
-        /* Main Chat Area */
-        .chat-area {
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            height: 100%;
-        }
-
-        .chat-header {
-            padding: 20px;
-            background-color: #ffb436;
-            color: white;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .chat-body {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background-color: #f0f0f0;
-        }
-
-        .message {
-            margin-bottom: 15px;
-            display: flex;
-        }
-
-        .message .text {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            max-width: 70%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .message.sent {
-            justify-content: flex-end;
-        }
-
-        .message.received .text {
-            background-color: #e1f5fe;
-        }
-
-        /* Chat Input */
-        .chat-input-area {
-            padding: 10px;
-            background-color: #f8f8f8;
-            display: flex;
-            align-items: center;
-        }
-
-        #chat-input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        #send-btn {
-            background-color: #0ccd90;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        #send-btn:hover {
-            background-color: #0056b3;
-        }
-        
     </style>
 </head>
 <body>
@@ -247,7 +131,7 @@
                         <div>Inicio</div>
                     </a>
                 </li>
-                <li class="menu-item ">
+                <li class="menu-item active">
                     <a href="lista_pedidos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-list-ul"></i>
                         <div>Mis pedidos</div>
@@ -265,7 +149,7 @@
                         <div>Pago</div>
                     </a>
                 </li>
-                <li class="menu-item active">
+                <li class="menu-item">
                     <a href="chat.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-chat"></i>
                         <div>Chat</div>
@@ -302,8 +186,6 @@
 
                     </ul>
                 </li>
-
-
             </ul>
         </aside>
         <!-- /Sidebar -->
@@ -428,7 +310,12 @@
                                         <span class="align-middle">Cambio de Contraseña</span>
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a class="dropdown-item" href="ajustes.html">
+                                        <i class="bx bx-cog me-2"></i>
+                                        <span class="align-middle">Ajustes</span>
+                                    </a>
+                                </li>
 
                                 <li>
                                     <div class="dropdown-divider"></div>
@@ -449,36 +336,48 @@
 
             <!-- Content wrapper -->
             <div class="content-wrapper">
-                <!-- Order Details -->
+                <!-- Review Section -->
                 <div class="container-xxl flex-grow-1 container-p-y">
-
-                    <!-- Chat Interface -->
-                    <div class="chat-wrapper">
-                        <!-- Sidebar for Contacts -->
-                        <div class="chat-sidebar">
-                            <h4>Contactos</h4>
-                            <div class="contact" onclick="selectContact('AgenteO1')">AgenteO1</div>
-                            <div class="contact" onclick="selectContact('AgenteO2')">AgenteO2</div>
-                            <div class="contact" onclick="selectContact('AgenteO3')">AgenteO3</div>
-                            <div class="contact" onclick="selectContact('AgenteO4')">AgenteO4</div>
-                            <div class="contact" onclick="selectContact('ChatBot')">ChatBot</div>
-                        </div>
-
-                        <!-- Main Chat Area -->
-                        <div class="chat-area">
-                            <div class="chat-header">
-                                <h4 id="chat-with">Chat</h4>
-                            </div>
-                            <div class="chat-body" id="chat-body">
-                                <!-- Chat messages will be appended here dynamically -->
-                            </div>
-                            <div class="chat-input-area">
-                                <input type="text" id="chat-input" placeholder="Type your message here...">
-                                <button id="send-btn">Send</button>
-                            </div>
-                        </div>
+                    <h4 class="fw-bold py-3 mb-4">Escoge un producto:</h4>
+                    <!-- Product Buttons -->
+                    <div class="product-buttons">
+                        <button>PRODUCTO: #10012</button>
+                        <button>PRODUCTO: #10013</button>
+                        <button>PRODUCTO: #10014</button>
+                        <button>PRODUCTO: #10015</button>
                     </div>
 
+                    <!-- Review Form -->
+                    <div class="review-form card">
+                        <h5>Ingrese la foto del producto recibido</h5>
+                        <div class="file-upload">
+                            <input type="file" id="file-input">
+                            <label for="file-input">Subir</label>
+                        </div>
+
+                        <h5 style="margin-top:1rem;">El producto es de buena calidad?</h5>
+                        <textarea rows="3"></textarea>
+
+                        <h5 style="margin-top:1rem;">Recibió rápido su producto?</h5>
+                        <textarea rows="3"></textarea>
+
+                        <h5 style="margin-top:1rem;">Qué tan conforme está con la atención del agente? (Nombre del agente)</h5>
+                        <!-- Star Rating -->
+                        <div class="star-rating">
+                            <i class="bx bxs-star" data-value="1"></i>
+                            <i class="bx bxs-star" data-value="2"></i>
+                            <i class="bx bxs-star" data-value="3"></i>
+                            <i class="bx bxs-star" data-value="4"></i>
+                            <i class="bx bxs-star" data-value="5"></i>
+                        </div>
+
+                        <!-- Submit and Cancel Buttons -->
+                        <div style="margin-top: 20px;">
+                            <button class="btn-cancel">CANCELAR</button>
+                            <!-- The "ENVIAR" button as a link to 'resena_enviada.html' -->
+                            <a href="resenia.html" class="btn-submit">ENVIAR</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /Content wrapper -->
@@ -488,60 +387,28 @@
     <!-- / Layout page -->
 </div>
 
-<!-- JavaScript for Chat Functionality -->
+<!-- JavaScript for star rating -->
 <script>
-    // Function to handle sending messages
-    document.getElementById('send-btn').addEventListener('click', sendMessage);
+    // Star rating script
+    const stars = document.querySelectorAll('.star-rating i');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = parseInt(this.getAttribute('data-value'));
 
-    // Handle Enter key for sending messages
-    document.getElementById('chat-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
+            // Clear all selected stars
+            stars.forEach(s => s.classList.remove('selected'));
+
+            // Highlight all stars up to the selected one
+            stars.forEach((s, index) => {
+                if (index < value) {
+                    s.classList.add('selected');
+                }
+            });
+
+            // Perform any action needed with the star rating value
+            console.log(value);
+        });
     });
-
-    function sendMessage() {
-        const input = document.getElementById('chat-input');
-        const messageText = input.value.trim();
-
-        if (messageText !== '') {
-            // Add the sent message to the chat body
-            appendMessage('sent', messageText);
-
-            // Clear the input field
-            input.value = '';
-
-            // Simulate a received response for demonstration
-            setTimeout(() => {
-                appendMessage('received', 'Respuesta automática.');
-            }, 1000);
-        }
-    }
-
-    // Function to append messages to the chat body
-    function appendMessage(type, text) {
-        const chatBody = document.getElementById('chat-body');
-
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', type);
-
-        const textDiv = document.createElement('div');
-        textDiv.classList.add('text');
-        textDiv.innerText = text;
-
-        messageDiv.appendChild(textDiv);
-        chatBody.appendChild(messageDiv);
-
-        // Scroll to the latest message
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    // Function to select a contact
-    function selectContact(name) {
-        document.getElementById('chat-with').innerText = `Chat with ${name}`;
-        document.getElementById('chat-body').innerHTML = ''; // Clear chat body for the new contact
-    }
 </script>
-
 </body>
 </html>

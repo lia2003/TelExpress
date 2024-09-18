@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Chat</title>
+    <title>Editar Orden</title>
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
     <link rel="stylesheet" href="../../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -27,11 +27,6 @@
         /* Sidebar icons */
         .menu-icon {
             margin-right: 8px;
-        }
-
-        /* Table styling */
-        .table-bordered th, .table-bordered td {
-            border: 1px solid #dee2e6;
         }
 
         /* Product images */
@@ -110,116 +105,14 @@
             background-color: #0056b3;
         }
 
-        /* Chat Interface Styles */
-        .chat-wrapper {
-            display: flex;
-            width: 100%;
-            height: 80vh;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-top: 20px;
+        .review-link {
+            color: #6a1b9a;
+            text-decoration: none;
         }
 
-        /* Sidebar */
-        .chat-sidebar {
-            width: 25%;
-            background-color: #f8f8f8;
-            border-right: 1px solid #ddd;
-            padding: 20px;
+        .review-link:hover {
+            text-decoration: underline;
         }
-
-        .chat-sidebar h4 {
-            margin-top: 0;
-        }
-
-        .contact {
-            padding: 10px;
-            margin-bottom: 5px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .contact:hover {
-            background-color: #ced4da;
-        }
-
-        /* Main Chat Area */
-        .chat-area {
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            height: 100%;
-        }
-
-        .chat-header {
-            padding: 20px;
-            background-color: #ffb436;
-            color: white;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .chat-body {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background-color: #f0f0f0;
-        }
-
-        .message {
-            margin-bottom: 15px;
-            display: flex;
-        }
-
-        .message .text {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            max-width: 70%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .message.sent {
-            justify-content: flex-end;
-        }
-
-        .message.received .text {
-            background-color: #e1f5fe;
-        }
-
-        /* Chat Input */
-        .chat-input-area {
-            padding: 10px;
-            background-color: #f8f8f8;
-            display: flex;
-            align-items: center;
-        }
-
-        #chat-input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        #send-btn {
-            background-color: #0ccd90;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        #send-btn:hover {
-            background-color: #0056b3;
-        }
-        
     </style>
 </head>
 <body>
@@ -247,7 +140,7 @@
                         <div>Inicio</div>
                     </a>
                 </li>
-                <li class="menu-item ">
+                <li class="menu-item active">
                     <a href="lista_pedidos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-list-ul"></i>
                         <div>Mis pedidos</div>
@@ -265,7 +158,7 @@
                         <div>Pago</div>
                     </a>
                 </li>
-                <li class="menu-item active">
+                <li class="menu-item">
                     <a href="chat.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-chat"></i>
                         <div>Chat</div>
@@ -278,32 +171,23 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-support"></i>
-                        <div data-i18n="Helptoclient">Ayuda al cliente</div>
+                    <a href="FAQS.html" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                        <div>Ayuda al cliente</div>
                     </a>
-
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="FAQS.html" class="menu-link">
-                                <div data-i18n="faqs">FAQs</div>
+                                <div>* FAQs</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="resenia.html" class="menu-link">
-                                <div data-i18n="Reseñas">Reseñas</div>
+                                <div>* Reseñas</div>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="Foro.html" class="menu-link">
-                                <div data-i18n="Foro">Foro</div>
-                            </a>
-                        </li>
-
                     </ul>
                 </li>
-
-
             </ul>
         </aside>
         <!-- /Sidebar -->
@@ -428,7 +312,12 @@
                                         <span class="align-middle">Cambio de Contraseña</span>
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a class="dropdown-item" href="ajustes.html">
+                                        <i class="bx bx-cog me-2"></i>
+                                        <span class="align-middle">Ajustes</span>
+                                    </a>
+                                </li>
 
                                 <li>
                                     <div class="dropdown-divider"></div>
@@ -451,34 +340,100 @@
             <div class="content-wrapper">
                 <!-- Order Details -->
                 <div class="container-xxl flex-grow-1 container-p-y">
+                    <h4 class="fw-bold py-3 mb-4">Orden: #10002
+                        <span class="status-label validacion">En validación</span>
+                        <!-- "Enviar una reseña" link redirects to another view (e.g., 'enviar_resena.html') -->
+                        <a href="enviar_resena.html" class="review-link">Enviar una reseña</a>
+                    </h4>
 
-                    <!-- Chat Interface -->
-                    <div class="chat-wrapper">
-                        <!-- Sidebar for Contacts -->
-                        <div class="chat-sidebar">
-                            <h4>Contactos</h4>
-                            <div class="contact" onclick="selectContact('AgenteO1')">AgenteO1</div>
-                            <div class="contact" onclick="selectContact('AgenteO2')">AgenteO2</div>
-                            <div class="contact" onclick="selectContact('AgenteO3')">AgenteO3</div>
-                            <div class="contact" onclick="selectContact('AgenteO4')">AgenteO4</div>
-                            <div class="contact" onclick="selectContact('ChatBot')">ChatBot</div>
-                        </div>
-
-                        <!-- Main Chat Area -->
-                        <div class="chat-area">
-                            <div class="chat-header">
-                                <h4 id="chat-with">Chat</h4>
-                            </div>
-                            <div class="chat-body" id="chat-body">
-                                <!-- Chat messages will be appended here dynamically -->
-                            </div>
-                            <div class="chat-input-area">
-                                <input type="text" id="chat-input" placeholder="Type your message here...">
-                                <button id="send-btn">Send</button>
-                            </div>
+                    <!-- Products Table -->
+                    <div class="card">
+                        <h5 class="card-header">Productos</h5>
+                        <div class="table-responsive text-nowrap">
+                            <table class="table">
+                                <thead class="table-light">
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>Productos</th>
+                                    <th>Código</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Total</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td><img src="zapatilla1.jpeg" alt="Producto" class="product-img"> Zapatillas deportivas</td>
+                                    <td>10012</td>
+                                    <td>S/120.00</td>
+                                    <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                                    <td>S/240.00</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
+                    <!-- Order Totals -->
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6 text-end">
+                            <p><strong>Subtotal:</strong> $980.00</p>
+                            <p><strong>Delivery:</strong> S/. 15.00</p>
+                            <hr>
+                            <p><strong>Total General:</strong> S/. 995.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Communication Section -->
+                     <div class="row">
+                        <div class="communication-section justify-content-between ">
+                            <div style="margin-left: 2rem;">
+                                <p>Comunicarse con un agente:</p>
+                                <i class="bx bx-chat" style="font-size: 24px; cursor: pointer;" onclick="window.location.href='chat.html';"></i>
+                            </div>
+                            <div style="margin-right: 1rem;">
+                                <button class="btn-delete">Eliminar</button>
+                                <!-- Modify button redirects to another view (e.g., 'editar_pedido.html') -->
+                                <a href="editar_orden.html" class="btn-modify">Modificar</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Shipping and Payment Details -->
+                    <div class="">
+                    <div class="details-box card">
+                        <h5>Detalles de Envío</h5>
+                        <form id="shipping-details-form">
+                            <label for="direccion">Dirección de envío:</label>
+                            <input type="text" id="direccion" name="direccion" value="Av. La Marina 1234, San Miguel">
+
+                            <label for="medio-pago">Medio de Pago:</label>
+                            <input type="text" id="medio-pago" name="medio-pago" value="Tarjeta">
+
+                            <label for="agente">Agente a cargo:</label>
+                            <input type="text" id="agente" name="agente" value="Aún no cuenta con un agente">
+
+                            <button type="submit" class="btn-save">Guardar</button>
+                        </form>
+                    </div>
+                    </div>
+
+                    <div class="details-box card">
+                        <h5>Detalles de Pago</h5>
+                        <form id="payment-details-form">
+                            <label for="monto-cancelado">Monto Cancelado:</label>
+                            <input type="text" id="monto-cancelado" name="monto-cancelado" value="S/754.99">
+
+                            <label for="monto-adeudado">Monto Adeudado/Pendiente:</label>
+                            <input type="text" id="monto-adeudado" name="monto-adeudado" value="S/100.00">
+
+                            <button type="submit" class="btn-save">Guardar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <!-- /Content wrapper -->
@@ -487,61 +442,6 @@
     </div>
     <!-- / Layout page -->
 </div>
-
-<!-- JavaScript for Chat Functionality -->
-<script>
-    // Function to handle sending messages
-    document.getElementById('send-btn').addEventListener('click', sendMessage);
-
-    // Handle Enter key for sending messages
-    document.getElementById('chat-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-
-    function sendMessage() {
-        const input = document.getElementById('chat-input');
-        const messageText = input.value.trim();
-
-        if (messageText !== '') {
-            // Add the sent message to the chat body
-            appendMessage('sent', messageText);
-
-            // Clear the input field
-            input.value = '';
-
-            // Simulate a received response for demonstration
-            setTimeout(() => {
-                appendMessage('received', 'Respuesta automática.');
-            }, 1000);
-        }
-    }
-
-    // Function to append messages to the chat body
-    function appendMessage(type, text) {
-        const chatBody = document.getElementById('chat-body');
-
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', type);
-
-        const textDiv = document.createElement('div');
-        textDiv.classList.add('text');
-        textDiv.innerText = text;
-
-        messageDiv.appendChild(textDiv);
-        chatBody.appendChild(messageDiv);
-
-        // Scroll to the latest message
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    // Function to select a contact
-    function selectContact(name) {
-        document.getElementById('chat-with').innerText = `Chat with ${name}`;
-        document.getElementById('chat-body').innerHTML = ''; // Clear chat body for the new contact
-    }
-</script>
 
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML GRUPO 2</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #090f63;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Página de inicio</h1>
+
+<!-- Enlaces que se ven como botones -->
+<a th:href="@{/admin}" class="button">SuperAdmin</a>
+<a th:href="@{/coordinador}" class="button">Coordinador Zonal</a>
+<a th:href="@{/agente}" class="button">Agente</a>
+<a th:href="@{/usuario}" class="button">Usuario final</a>
+<a th:href="@{'/hola/gaaa'}" class="button">HOLA</a>
+
+
+</body>
+</html>
