@@ -351,6 +351,7 @@
                           <table class="table table-striped">
                             <thead>
                               <tr>
+                                <th>Selecc</th>
                                 <th>N° Orden</th>
                                 <th>Producto</th>
                                 <th>Precio</th>
@@ -358,10 +359,12 @@
                                 <th>Monto</th>
                                 <th>Delivery</th>
                                 <th>Total</th>
+                                <th></th>
                               </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
                               <tr>
+                                <td><input type="checkbox" name="order1" value="1"></td>
                                 <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1</strong></td>
                                 <td>Celular</td>
                                 <td>1000</td>
@@ -369,8 +372,21 @@
                                 <td>10000</td>
                                 <td>200</td>
                                 <td>10200</td>
+                                <td>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"data-bs-target="#modalScrollable"
+                                        ><i class="bx bx-detail me-1"></i> Ver detalle</a>
+                                    
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               <tr>
+                                <td><input type="checkbox" name="order2" value="2"></td>
                                 <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>2</strong></td>
                                 <td>Celular</td>
                                 <td>1000</td>
@@ -378,8 +394,21 @@
                                 <td>10000</td>
                                 <td>200</td>
                                 <td>10200</td>
+                                <td>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"data-bs-target="#modalScrollable"
+                                        ><i class="bx bx-detail me-1"></i> Ver detalle</a>
+                                      
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               <tr>
+                                <td><input type="checkbox" name="order3" value="3"></td>
                                 <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>3</strong></td>
                                 <td>Celular</td>
                                 <td>1000</td>
@@ -387,8 +416,21 @@
                                 <td>10000</td>
                                 <td>200</td>
                                 <td>10200</td>
+                                <td>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"data-bs-target="#modalScrollable"
+                                        ><i class="bx bx-detail me-1"></i> Ver detalle</a>
+                                      
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               <tr>
+                                <td><input type="checkbox" name="order4" value="4"></td>
                                 <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>4</strong></td>
                                 <td>Celular</td>
                                 <td>1000</td>
@@ -396,9 +438,27 @@
                                 <td>10000</td>
                                 <td>200</td>
                                 <td>10200</td>
+                                <td>
+                                  <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                      <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal"data-bs-target="#modalScrollable"
+                                        ><i class="bx bx-detail me-1"></i> Ver detalle</a>
+                                      
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
+                        </div>
+
+                      
+                        <!-- Botón para pagar los pagos pendientes -->
+                        <div class="text-end mt-3">
+                          <button type="button" class="btn btn-primary">Pagar compras pendientes(0 seleccionados)</button>
                         </div>
                         <!-- Paginación -->
                         <div class="d-flex justify-content-end mt-4">
@@ -518,6 +578,81 @@
 </div>
 <!-- / Layout wrapper -->
 
+ <!-- Modal -->
+ <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalScrollableTitle">Detalle de orden #1</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="order-details">
+          <div class="order-item">
+            <span class="label">Cargo Fijo:</span>
+            <span class="value">S/ 10</span>
+          </div>
+          <div class="order-item">
+            <span class="label">Cantidad:</span>
+            <span class="value">10</span>
+          </div>
+          <div class="order-item">
+            <span class="label">Precio por unidad</span>
+            <span class="value">S/ 200</span>
+          </div>
+          <div class="order-item">
+            <span class="label">Subtotal</span>
+            <span class="value">S/ 2010</span>
+          </div>
+          <div class="order-item">
+            <span class="label">Delivery</span>
+            <span class="value">S/ 100</span>
+          </div>
+          <div class="order-item">
+            <span class="label">Total</span>
+            <span class="value">S/ 2110</span>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Pagar deuda</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
+  .value {
+    color: #333;
+  }
+</style>
 
 
 <!-- Core JS -->
