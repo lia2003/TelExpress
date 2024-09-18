@@ -377,25 +377,35 @@
                     </div>
 
                     <!-- Order Totals -->
-                    <p>Subtotal: S/839.99</p>
-                    <p>Delivery: S/15.00</p>
-                    <h5>Total: S/854.99</h5>
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-6 text-end">
+                            <p><strong>Subtotal:</strong> $980.00</p>
+                            <p><strong>Delivery:</strong> S/. 15.00</p>
+                            <hr>
+                            <p><strong>Total General:</strong> S/. 995.00</p>
+                        </div>
+                    </div>
 
                     <!-- Communication Section -->
-                    <div class="communication-section">
-                        <div>
-                            <button class="btn-delete">Eliminar</button>
-                            <!-- Modify button redirects to another view (e.g., 'editar_pedido.html') -->
-                            <a href="editar_pedido.html" class="btn-modify">Modificar</a>
-                        </div>
-                        <div>
-                            <p>Comunicarse con un agente:</p>
-                            <i class="bx bx-chat" style="font-size: 24px; cursor: pointer;"></i>
+                     <div class="row">
+                        <div class="communication-section justify-content-between ">
+                            <div style="margin-left: 2rem;">
+                                <p>Comunicarse con un agente:</p>
+                                <i class="bx bx-chat" style="font-size: 24px; cursor: pointer;"></i>
+                            </div>
+                            <div style="margin-right: 1rem;">
+                                <button class="btn-delete">Eliminar</button>
+                                <!-- Modify button redirects to another view (e.g., 'editar_pedido.html') -->
+                                <a href="editar_orden.html" class="btn-modify">Modificar</a>
+                            </div>
+                            
                         </div>
                     </div>
 
                     <!-- Shipping and Payment Details -->
-                    <div class="details-box">
+                    <div class="">
+                    <div class="details-box card">
                         <h5>Detalles de Envío</h5>
                         <form id="shipping-details-form">
                             <label for="direccion">Dirección de envío:</label>
@@ -410,8 +420,9 @@
                             <button type="submit" class="btn-save">Guardar</button>
                         </form>
                     </div>
+                    </div>
 
-                    <div class="details-box">
+                    <div class="details-box card">
                         <h5>Detalles de Pago</h5>
                         <form id="payment-details-form">
                             <label for="monto-cancelado">Monto Cancelado:</label>
