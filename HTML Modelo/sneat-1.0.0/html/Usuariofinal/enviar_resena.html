@@ -111,26 +111,34 @@
     <div class="layout-container">
         <!-- Sidebar -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+            <div style="text-align: center;">
+                <img src="logo.png" alt="Imagen" style="width: 150px; margin-bottom: -70px; margin-top: -20px">
+            </div>
+
             <div class="app-brand demo" style="text-align: center;">
-                <a href="inicio.html" class="app-brand-link">
-                    <span class="app-brand-text demo menu-text fw-bolder">TelExpress</span>
+                <a href="inicio_usuariofinal.html" class="app-brand-link">
+                    <span class="app-brand-text demo menu-text fw-bolder" style="font-family: 'Poppins', sans-serif; color: #7367F0; padding-left: 15px;">TelExpress</span>
+                </a>
+
+                <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                    <i class="bx bx-chevron-left bx-sm align-middle"></i>
                 </a>
             </div>
             <ul class="menu-inner py-1">
                 <li class="menu-item">
-                    <a href="inicio.html" class="menu-link">
+                    <a href="inicio_usuariofinal.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div>Inicio</div>
                     </a>
                 </li>
                 <li class="menu-item active">
-                    <a href="mis_pedidos.html" class="menu-link">
+                    <a href="lista_pedidos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-list-ul"></i>
                         <div>Mis pedidos</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="tienda.html" class="menu-link">
+                    <a href="lista_productos.html" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-store"></i>
                         <div>Tienda</div>
                     </a>
@@ -154,21 +162,28 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="faq.html" class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-question-mark"></i>
-                        <div>Ayuda al cliente</div>
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-support"></i>
+                        <div data-i18n="Helptoclient">Ayuda al cliente</div>
                     </a>
+
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="faqs.html" class="menu-link">
-                                <div>* FAQs</div>
+                            <a href="FAQs.html" class="menu-link">
+                                <div data-i18n="faqs">FAQs</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="resenas.html" class="menu-link">
-                                <div>* Reseñas</div>
+                                <div data-i18n="Reseñas">Reseñas</div>
                             </a>
                         </li>
+                        <li class="menu-item">
+                            <a href="foro.html" class="menu-link">
+                                <div data-i18n="Foro">Foro</div>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
             </ul>
