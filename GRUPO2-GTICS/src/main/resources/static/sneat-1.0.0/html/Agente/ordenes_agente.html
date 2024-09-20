@@ -298,12 +298,60 @@
             <!-- Content wrapper -->
             <div class="content-wrapper">
                 <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="p-3 d-flex">
+                        <input type="text" id="searchInput" class="form-control me-2" placeholder="Buscar por nombre o apellido...">
+                        <button id="searchBtn" class="btn btn-primary">Buscar</button>
+                    </div>
                     <!-- Tabla de productos -->
                         <div class="col-12 col-lg-12 mb-4">
                             <div class="card">
                                 <h5 class="card-header">Órdenes</h5>
                                 <div class="table-responsive text-nowrap">
-                                    <table class="table table-striped">
+                                    <!-- Filtros -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-3">
+                                            <label for="filterEstado" class="form-label">Estado</label>
+                                            <select class="form-select" id="filterEstado" onchange="filterTable()">
+                                                <option value="">Todos</option>
+                                                <option value="En Proceso">En Proceso</option>
+                                                <option value="Arribo al País">Arribo al País</option>
+                                                <option value="En Aduanas">En Aduanas</option>
+                                                <option value="En Ruta">En Ruta</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="filterCliente" class="form-label">Cliente</label>
+                                            <select class="form-select" id="filterCliente" onchange="filterTable()">
+                                                <option value="">Todos</option>
+                                                <option value="Cliente A">Cliente A</option>
+                                                <option value="Cliente B">Cliente B</option>
+                                                <option value="Cliente C">Cliente C</option>
+                                                <option value="Cliente D">Cliente D</option>
+                                                <!-- Añade más opciones según los clientes disponibles -->
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="filterMoneda" class="form-label">Moneda</label>
+                                            <select class="form-select" id="filterMoneda" onchange="filterTable()">
+                                                <option value="">Todas</option>
+                                                <option value="USD">USD</option>
+                                                <option value="EUR">EUR</option>
+                                                <option value="MXN">MXN</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="filterMetodoEnvio" class="form-label">Método de Envío</label>
+                                            <select class="form-select" id="filterMetodoEnvio" onchange="filterTable()">
+                                                <option value="">Todos</option>
+                                                <option value="Aéreo">Aéreo</option>
+                                                <option value="Marítimo">Marítimo</option>
+                                                <option value="Terrestre">Terrestre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /Filtros -->
+                                    <!-- Tabla -->
+                                    <table class="table table-striped" id="ordersTable">
                                         <thead class="table-light">
                                     <tr>
                                         <th>N°</th>
@@ -429,6 +477,45 @@
 
 
                                     </table>
+                                    <!-- /Tabla -->
+                                    <!-- Script para filtrar la tabla -->
+                                    <script>
+                                        function filterTable() {
+                                            var filterEstado = document.getElementById('filterEstado').value.toLowerCase();
+                                            var filterCliente = document.getElementById('filterCliente').value.toLowerCase();
+                                            var filterMoneda = document.getElementById('filterMoneda').value.toLowerCase();
+                                            var filterMetodoEnvio = document.getElementById('filterMetodoEnvio').value.toLowerCase();
+
+                                            var table = document.getElementById("ordersTable");
+                                            var tr = table.getElementsByTagName("tr");
+
+                                            for (var i = 1; i < tr.length; i++) {
+                                                var tdEstado = tr[i].getElementsByTagName("td")[5];
+                                                var tdCliente = tr[i].getElementsByTagName("td")[1];
+                                                var tdMoneda = tr[i].getElementsByTagName("td")[2];
+                                                var tdMetodoEnvio = tr[i].getElementsByTagName("td")[4];
+
+                                                if (tdEstado && tdCliente && tdMoneda && tdMetodoEnvio) {
+                                                    var estado = tdEstado.textContent.toLowerCase();
+                                                    var cliente = tdCliente.textContent.toLowerCase();
+                                                    var moneda = tdMoneda.textContent.toLowerCase();
+                                                    var metodoEnvio = tdMetodoEnvio.textContent.toLowerCase();
+
+                                                    if (
+                                                        (filterEstado === "" || estado.indexOf(filterEstado) > -1) &&
+                                                        (filterCliente === "" || cliente.indexOf(filterCliente) > -1) &&
+                                                        (filterMoneda === "" || moneda.indexOf(filterMoneda) > -1) &&
+                                                        (filterMetodoEnvio === "" || metodoEnvio.indexOf(filterMetodoEnvio) > -1)
+                                                    ) {
+                                                        tr[i].style.display = "";
+                                                    } else {
+                                                        tr[i].style.display = "none";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </script>
+                                    <!-- Script para filtrar la tabla -->
                                 </div>
 
 
