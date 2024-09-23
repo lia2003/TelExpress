@@ -11,6 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
+DROP DATABASE IF EXISTS `mydb`;
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
@@ -245,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`proveedor` (
   `ruc` VARCHAR(45) NOT NULL,
   `correo` VARCHAR(45) NOT NULL,
   `zona_idzona` INT NOT NULL,
-  `fotoProveedor` BLOB NOT NULL,
+  `fotoProveedor` BLOB NULL,
   PRIMARY KEY (`idproveedor`),
   UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) VISIBLE,
   UNIQUE INDEX `ruc_UNIQUE` (`ruc` ASC) VISIBLE,
